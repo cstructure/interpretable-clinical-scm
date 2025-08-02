@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns
+         http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="narrative" for="node" attr.name="narrative" attr.type="string"/>
+  <key id="narrative" for="edge" attr.name="narrative" attr.type="string"/>
+  <key id="label" for="node" attr.name="label" attr.type="string"/>
+  <key id="type" for="node" attr.name="type" attr.type="string"/>
+  <key id="featureSource" for="node" attr.name="featureSource" attr.type="string"/>
+  <graph id="CausalModel" edgedefault="directed">
+
+    <!-- Nodes: Patient Demographics -->
+    <node id="Age">
+      <data key="narrative">Patient's age in years.</data>
+      <data key="label">Age</data>
+      <data key="type">unadjusted</data>
+      <data key="featureSource">{"sdy1662_data_dictionary.csv":{"featureID":["AGE"],"featureCategory":"Continuous"}}</data>
+    </node>
+    <node id="BMI">
+      <data key="narrative">Body Mass Index.</data>
+      <data key="label">BMI</data>
+      <data key="type">unadjusted</data>
+      <data key="featureSource">{"sdy1662_data_dictionary.csv":{"featureID":["BMI"],"featureCategory":"Continuous"}}</data>
+    </node>
+
+    <!-- Nodes: Comorbidities -->
+    <node id="DIABETES">
+        <data key="narrative">Patient has a history of diabetes.</data>
+        <data key="label">Diabetes</data>
+        <data key="type">unadjusted</data>
+        <data key="featureSource">{"sdy1662_data_dictionary.csv":{"featureID":["DIABETES"],"featureCategory":"Binary"}}</data>
+    </node>
+    <node id="CHF">
+        <data key="narrative">Patient has a history of Congestive Heart Failure.</data>
+        <data key="label">Congestive Heart Failure</data>
+        <data key="type">unadjusted</data>
+        <data key="featureSource">{"sdy1662_data_dictionary.csv":{"featureID":["CHF"],"featureCategory":"Binary"}}</data>
+    </node>
+    <node id="CKD">
+        <data key="narrative">Patient has a history of Chronic Kidney Disease.</data>
+        <data key="label">Chronic Kidney Disease</data>
+        <data key="type">unadjusted</data>
+        <data key="featureSource">{"sdy1662_data_dictionary.csv":{"featureID":["CKD"],"featureCategory":"Binary"}}</data>
+    </node>
+    <node id="COPD">
+        <data key="narrative">Patient has a history of Chronic Obstructive Pulmonary Disease.</data>
+        <data key="label">COPD</data>
+        <data key="type">unadjusted</data>
+        <data key="featureSource">{"sdy1662_data_dictionary.csv":{"featureID":["COPD"],"featureCategory":"Binary"}}</data>
+    </node>
+    <node id="CANCER_FLAG">
+        <data key="narrative">Patient has a history of cancer.</data>
+        <data key="label">Cancer</data>
+        <data key="type">unadjusted</data>
+        <data key="featureSource">{"sdy1662_data_dictionary.csv":{"featureID":["CANCER_FLAG"],"featureCategory":"Binary"}}</data>
+    </node>
+
+    <!-- Nodes: Severity of Illness -->
+    <node id="Severity">
+      <data key="narrative">A numeric score indicating the severity of the patient's condition upon admission.</data>
+      <data key="label">Severity Score</data>
+      <data key="type">adjusted</data>
+      <data key="featureSource">{"sdy1662_data_dictionary.csv":{"featureID":["SEVERITY_NUMERIC"],"featureCategory":"Ordinal"}}</data>
+    </node>
+    <node id="CRP_LOG2">
+        <data key="narrative">C-reactive protein, a marker of inflammation.</data>
+        <data key="label">CRP (log2)</data>
+        <data key="type">adjusted</data>
+        <data key="featureSource">{"sdy1662_data_dictionary.csv":{"featureID":["CRP_LOG2"],"featureCategory":"Continuous"}}</data>
+    </node>
+    <node id="O2SAT_MIN">
+        <data key="narrative">Minimum oxygen saturation, a critical measure of respiratory function.</data>
+        <data key="label">Min O2 Saturation</data>
+        <data key="type">adjusted</data>
+        <data key="featureSource">{"sdy1662_data_dictionary.csv":{"featureID":["O2SAT_MIN"],"featureCategory":"Continuous"}}</data>
+    </node>
+
+    <!-- Node: Treatment / Action -->
+    <node id="Steroids">
+      <data key="narrative">Administration of glucocorticoids (e.g., dexamethasone) during hospitalization.</data>
+      <data key="label">Steroids</data>
+      <data key="type">action</data>
+      <data key="featureSource">{"sdy1662_data_dictionary.csv":{"featureID":["STEROIDS"],"featureCategory":"Binary"}}</data>
+    </node>
+
+    <!-- Node: Other Treatments -->
+    <node id="REMDESIVIR">
+        <data key="narrative">Patient received Remdesivir.</data>
+        <data key="label">Remdesivir</data>
+        <data key="type">adjusted</data>
+        <data key="featureSource">{"sdy1662_data_dictionary.csv":{"featureID":["REMDESIVIR"],"featureCategory":"Binary"}}</data>
+    </node>
+
+    <!-- Node: Outcome -->
+    <node id="Death">
+      <data key="narrative">Death within 28 days of hospital admission.</data>
+      <data key="label">28-Day Mortality</data>
+      <data key="type">outcome</data>
+      <data key="featureSource">{"sdy1662_data_dictionary.csv":{"featureID":["DEATH"],"featureCategory":"Binary"}}</data>
+    </node>
+
+    <!-- Edges -->
+    <edge id="e1" source="Age" target="Severity"/>
+    <edge id="e2" source="BMI" target="Severity"/>
+    <edge id="e3" source="DIABETES" target="Severity"/>
+    <edge id="e4" source="CHF" target="Severity"/>
+    <edge id="e5" source="CKD" target="Severity"/>
+    <edge id="e6" source="COPD" target="Severity"/>
+    <edge id="e7" source="CANCER_FLAG" target="Severity"/>
+    <edge id="e8" source="Severity" target="Steroids"/>
+    <edge id="e9" source="CRP_LOG2" target="Steroids"/>
+    <edge id="e10" source="O2SAT_MIN" target="Steroids"/>
+    <edge id="e11" source="Steroids" target="Death"/>
+    <edge id="e12" source="Severity" target="Death"/>
+    <edge id="e13" source="Age" target="Death"/>
+    <edge id="e14" source="DIABETES" target="Death"/>
+    <edge id="e15" source="CHF" target="Death"/>
+    <edge id="e16" source="CKD" target="Death"/>
+    <edge id="e17" source="COPD" target="Death"/>
+    <edge id="e18" source="CANCER_FLAG" target="Death"/>
+    <edge id="e19" source="Severity" target="REMDESIVIR"/>
+    <edge id="e20" source="REMDESIVIR" target="Death"/>
+    <edge id="e21" source="Severity" target="CRP_LOG2"/>
+    <edge id="e22" source="Severity" target="O2SAT_MIN"/>
+  </graph>
+</graphml>

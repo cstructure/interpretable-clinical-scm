@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Structural causal model for evaluating systemic corticosteroids ("Steroids") on 28-day survival in hospitalized COVID-19 patients.
+  Built for Midwest Healthcare Conference Causal Diagram Challenge.
+-->
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns
+         http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <!-- REQUIRED KEY DEFINITIONS -->
+  <key id="narrative" for="node" attr.name="narrative" attr.type="string"/>
+  <key id="narrative" for="edge"  attr.name="narrative" attr.type="string"/>
+  <key id="label"     for="node" attr.name="label"     attr.type="string"/>
+  <key id="type"      for="node" attr.name="type"      attr.type="string"/>
+  <key id="featureSource" for="node" attr.name="featureSource" attr.type="string"/>
+
+  <graph id="CausalModel" edgedefault="directed">
+    <!-- ACTION (TREATMENT) -->
+    <node id="Steroids">
+      <data key="narrative">Indicator that the patient received systemic corticosteroids (e.g. dexamethasone, hydrocortisone, methylprednisolone, prednisolone, prednisone) during the index hospitalization.</data>
+      <data key="label">Steroids</data>
+      <data key="type">action</data>
+      <data key="featureSource">{"sdy1662.csv":{"featureID":["STEROIDS"],"featureCategory":"Binary"}}</data>
+    </node>
+
+    <!-- OUTCOME -->
+    <node id="Survival28Days">
+      <data key="narrative">Patient survival status 28 days after hospital admission (1 = alive, 0 = died).  Proxied by the DEATH flag truncated at 28&nbsp;days.</data>
+      <data key="label">28-day Survival</data>
+      <data key="type">outcome</data>
+      <data key="featureSource">{"sdy1662.csv":{"featureID":["DEATH"],"featureCategory":"Binary"}}</data>
+    </node>
+
+    <!-- CONFOUNDERS WE PLAN TO ADJUST FOR -->
+    <node id="Age">
+      <data key="narrative">Age in years at admission, a strong prognostic factor that can also influence treatment decisions.</data>
+      <data key="label">Age</data>
+      <data key="type">adjusted</data>
+      <data key="featureSource">{"sdy1662.csv":{"featureID":["AGE"],"featureCategory":"Continuous"}}</data>
+    </node>
+
+    <node id="Gender">
+      <data key="narrative">Patient biological sex (male / female).</data>
+      <data key="label">Sex</data>
+      <data key="type">adjusted</data>
+      <data key="featureSource">{"sdy1662.csv":{"featureID":["GENDER"],"featureCategory":"Binary"}}</data>
+    </node>
+
+    <!-- INDIVIDUAL COMORBIDITY NODES -->
+    <node id="DIABETES">
+      <data key="narrative">Pre-existing diagnosis of diabetes mellitus.</data>
+      <data key="label">Diabetes</data>
+      <data key="type">adjusted</data>
+      <data key="featureSource">{"sdy1662.csv":{"featureID":["DIABETES"],"featureCategory":"Binary"}}</data>
+    </node>
+    <node id="CKD">
+      <data key="narrative">Chronic kidney disease prior to admission.</data>
+      <data key="label">CKD</data>
+      <data key="type">adjusted</data>
+      <data key="featureSource">{"sdy1662.csv":{"featureID":["CKD"],"featureCategory":"Binary"}}</data>
+    </node>
+    <node id="CHF">
+      <data key="narrative">Pre-existing congestive heart failure.</data>
+      <data key="label">CHF</data>
+      <data key="type">adjusted</data>
+      <data key="featureSource">{"sdy1662.csv":{"featureID":["CHF"],"featureCategory":"Binary"}}</data>
+    </node>
+    <node id="COPD">
+      <data key="narrative">Pre-existing chronic obstructive pulmonary disease.</data>
+      <data key="label">COPD</data>
+      <data key="type">adjusted</data>
+      <data key="featureSource">{"sdy1662.csv":{"featureID":["COPD"],"featureCategory":"Binary"}}</data>
+    </node>
+    <node id="CORONARY_ARTERY_DISEASE">
+      <data key="narrative">History of coronary artery disease.</data>
+      <data key="label">CAD</data>
+      <data key="type">adjusted</data>
+      <data key="featureSource">{"sdy1662.csv":{"featureID":["CORONARY_ARTERY_DISEASE"],"featureCategory":"Binary"}}</data>
+    </node>
+    <node id="CANCER_FLAG">
+      <data key="narrative">Active cancer diagnosis at baseline.</data>
+      <data key="label">Cancer</data>
+      <data key="type">adjusted</data>
+      <data key="featureSource">{"sdy1662.csv":{"featureID":["CANCER_FLAG"],"featureCategory":"Binary"}}</data>
+    </node>
+
+    <node id="BaselineSeverity">
+      <data key="narrative">Clinical severity of illness on admission quantified by the numeric severity score (1–3) incorporating oxygen needs and organ dysfunction.</data>
+      <data key="label">Severity</data>
+      <data key="type">adjusted</data>
+      <data key="featureSource">{"sdy1662.csv":{"featureID":["SEVERITY_NUMERIC"],"featureCategory":"Ordinal"}}</data>
+    </node>
+
+    <!-- OTHER THERAPIES (POTENTIAL CO-TREATMENTS) -->
+    <!-- INDIVIDUAL CO-TREATMENT NODES -->
+    <node id="ANTICOAGULANTS">
+      <data key="narrative">In-hospital exposure to therapeutic or prophylactic anticoagulants.</data>
+      <data key="label">Anticoagulants</data>
+      <data key="type">adjusted</data>
+      <data key="featureSource">{"sdy1662.csv":{"featureID":["ANTICOAGULANTS"],"featureCategory":"Binary"}}</data>
+    </node>
+    <node id="ANTICYTOKINES">
+      <data key="narrative">Receipt of cytokine-targeted therapies such as tocilizumab or anakinra.</data>
+      <data key="label">Anticytokines</data>
+      <data key="type">adjusted</data>
+      <data key="featureSource">{"sdy1662.csv":{"featureID":["ANTICYTOKINES"],"featureCategory":"Binary"}}</data>
+    </node>
+    <node id="HYDROXYCHLOROQUINE">
+      <data key="narrative">Receipt of hydroxychloroquine.</data>
+      <data key="label">HCQ</data>
+      <data key="type">adjusted</data>
+      <data key="featureSource">{"sdy1662.csv":{"featureID":["HYDROXYCHLOROQUINE"],"featureCategory":"Binary"}}</data>
+    </node>
+    <node id="REMDESIVIR">
+      <data key="narrative">Receipt of antiviral remdesivir.</data>
+      <data key="label">Remdesivir</data>
+      <data key="type">adjusted</data>
+      <data key="featureSource">{"sdy1662.csv":{"featureID":["REMDESIVIR"],"featureCategory":"Binary"}}</data>
+    </node>
+
+    <!-- CAUSAL EDGES -->
+    <edge id="e1" source="Age" target="BaselineSeverity">
+      <data key="narrative">Older patients typically present with more severe illness.</data>
+    </edge>
+    <edge id="e2" source="Age" target="Steroids">
+      <data key="narrative">Clinicians may preferentially prescribe or withhold steroids based on patient age.</data>
+    </edge>
+    <edge id="e3" source="Age" target="Survival28Days">
+      <data key="narrative">Age is a well-known independent predictor of mortality.</data>
+    </edge>
+
+    <edge id="e4" source="Gender" target="BaselineSeverity">
+      <data key="narrative">Male sex has been associated with more severe COVID-19.</data>
+    </edge>
+    <edge id="e5" source="Gender" target="Steroids">
+      <data key="narrative">Treatment practices may vary by sex.</data>
+    </edge>
+    <edge id="e6" source="Gender" target="Survival28Days">
+      <data key="narrative">Sex differences in COVID-19 outcomes are documented.</data>
+    </edge>
+
+    <!-- Edges from individual comorbidities -->
+    <edge id="eDiabetes_BS" source="DIABETES" target="BaselineSeverity">
+      <data key="narrative">Diabetes contributes to baseline severity.</data>
+    </edge>
+    <edge id="eDiabetes_ST" source="DIABETES" target="Steroids">
+      <data key="narrative">Diabetes may influence clinicians when prescribing steroids due to hyperglycemia risk.</data>
+    </edge>
+    <edge id="eDiabetes_OS" source="DIABETES" target="Survival28Days">
+      <data key="narrative">Diabetes is associated with worse COVID-19 survival.</data>
+    </edge>
+
+    <edge id="eCKD_BS" source="CKD" target="BaselineSeverity">
+      <data key="narrative">Chronic kidney disease increases illness severity.</data>
+    </edge>
+    <edge id="eCKD_ST" source="CKD" target="Steroids">
+      <data key="narrative">CKD may alter steroid prescribing.</data>
+    </edge>
+    <edge id="eCKD_OS" source="CKD" target="Survival28Days">
+      <data key="narrative">CKD worsens survival.</data>
+    </edge>
+
+    <edge id="eCHF_BS" source="CHF" target="BaselineSeverity">
+      <data key="narrative">Heart failure contributes to baseline severity.</data>
+    </edge>
+    <edge id="eCHF_ST" source="CHF" target="Steroids">
+      <data key="narrative">CHF status may influence steroid use.</data>
+    </edge>
+    <edge id="eCHF_OS" source="CHF" target="Survival28Days">
+      <data key="narrative">CHF is independently associated with mortality.</data>
+    </edge>
+
+    <edge id="eCOPD_BS" source="COPD" target="BaselineSeverity">
+      <data key="narrative">COPD affects respiratory severity.</data>
+    </edge>
+    <edge id="eCOPD_ST" source="COPD" target="Steroids">
+      <data key="narrative">COPD patients may receive steroids differently.</data>
+    </edge>
+    <edge id="eCOPD_OS" source="COPD" target="Survival28Days">
+      <data key="narrative">COPD worsens outcomes.</data>
+    </edge>
+
+    <edge id="eCAD_BS" source="CORONARY_ARTERY_DISEASE" target="BaselineSeverity">
+      <data key="narrative">Coronary artery disease increases severity.</data>
+    </edge>
+    <edge id="eCAD_ST" source="CORONARY_ARTERY_DISEASE" target="Steroids">
+      <data key="narrative">Coronary artery disease may impact steroid decision-making.</data>
+    </edge>
+    <edge id="eCAD_OS" source="CORONARY_ARTERY_DISEASE" target="Survival28Days">
+      <data key="narrative">Coronary artery disease is a mortality risk factor.</data>
+    </edge>
+
+    <edge id="eCancer_BS" source="CANCER_FLAG" target="BaselineSeverity">
+      <data key="narrative">Active cancer increases illness severity.</data>
+    </edge>
+    <edge id="eCancer_ST" source="CANCER_FLAG" target="Steroids">
+      <data key="narrative">Oncologic status may influence steroid use decisions.</data>
+    </edge>
+    <edge id="eCancer_OS" source="CANCER_FLAG" target="Survival28Days">
+      <data key="narrative">Cancer is associated with mortality risk.</data>
+    </edge>
+
+    <edge id="e10" source="BaselineSeverity" target="Steroids">
+      <data key="narrative">Severity strongly drives clinical decision to initiate steroids.</data>
+    </edge>
+    <edge id="e11" source="BaselineSeverity" target="Survival28Days">
+      <data key="narrative">Baseline severity is prognostic for mortality.</data>
+    </edge>
+
+    <!-- Edges from individual co-treatments -->
+    <edge id="eAnticoag_ST" source="ANTICOAGULANTS" target="Steroids">
+      <data key="narrative">Steroid use is correlated with anticoagulation protocols.</data>
+    </edge>
+    <edge id="eAnticoag_OS" source="ANTICOAGULANTS" target="Survival28Days">
+      <data key="narrative">Anticoagulation may improve or worsen survival.</data>
+    </edge>
+
+    <edge id="eAnticyto_ST" source="ANTICYTOKINES" target="Steroids">
+      <data key="narrative">Steroid and cytokine-targeted therapies are often co-administered.</data>
+    </edge>
+    <edge id="eAnticyto_OS" source="ANTICYTOKINES" target="Survival28Days">
+      <data key="narrative">Anticytokine therapy may affect survival.</data>
+    </edge>
+
+    <edge id="eHCQ_ST" source="HYDROXYCHLOROQUINE" target="Steroids">
+      <data key="narrative">Hydroxychloroquine use is associated with treatment protocols including steroids.</data>
+    </edge>
+    <edge id="eHCQ_OS" source="HYDROXYCHLOROQUINE" target="Survival28Days">
+      <data key="narrative">Hydroxychloroquine may influence survival.</data>
+    </edge>
+
+    <edge id="eRemd_ST" source="REMDESIVIR" target="Steroids">
+      <data key="narrative">Steroids are often given alongside remdesivir.</data>
+    </edge>
+    <edge id="eRemd_OS" source="REMDESIVIR" target="Survival28Days">
+      <data key="narrative">Remdesivir can impact survival.</data>
+    </edge>
+
+    <edge id="e14" source="Steroids" target="Survival28Days">
+      <data key="narrative">Primary causal effect of interest: systemic steroids may improve survival by modulating inflammation but may also cause harms.</data>
+    </edge>
+  </graph>
+</graphml>

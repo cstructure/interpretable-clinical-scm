@@ -1,0 +1,850 @@
+{
+  "nodes": [
+    {
+      "id": "Age",
+      "position": {
+        "x": 40,
+        "y": 881.25
+      },
+      "data": {
+        "label": "Age",
+        "narrative": "Patient age at admission. Older age is associated with worse COVID-19 outcomes and may influence treatment decisions.",
+        "type": "adjusted",
+        "featureSource": {
+          "sdy1662.csv": {
+            "featureID": [
+              "AGE"
+            ],
+            "featureCategory": "Continuous"
+          }
+        }
+      },
+      "type": "adjusted",
+      "xPos": 40,
+      "yPos": 881.25,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40
+    },
+    {
+      "id": "Sex",
+      "position": {
+        "x": 40,
+        "y": 275.625
+      },
+      "data": {
+        "label": "Sex",
+        "narrative": "Biological sex of the patient. Sex differences may affect COVID-19 severity and treatment response.",
+        "type": "adjusted",
+        "featureSource": {
+          "sdy1662.csv": {
+            "featureID": [],
+            "featureCategory": ""
+          }
+        }
+      },
+      "type": "unadjusted",
+      "xPos": 40,
+      "yPos": 275.625,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40,
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "Race",
+      "position": {
+        "x": 220,
+        "y": 530.625
+      },
+      "data": {
+        "label": "Race/Ethnicity",
+        "narrative": "Patient's race/ethnicity. Important for understanding health disparities and potential differences in treatment access or response.",
+        "type": "adjusted",
+        "featureSource": {
+          "sdy1662.csv": {
+            "featureID": [],
+            "featureCategory": ""
+          }
+        }
+      },
+      "type": "unadjusted",
+      "xPos": 220,
+      "yPos": 530.625,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40,
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "BMI",
+      "position": {
+        "x": 40,
+        "y": 551.25
+      },
+      "data": {
+        "label": "BMI",
+        "narrative": "Body Mass Index. Obesity is a known risk factor for severe COVID-19 and may influence treatment decisions.",
+        "type": "adjusted",
+        "featureSource": {
+          "sdy1662.csv": {
+            "featureID": [
+              "BMI"
+            ],
+            "featureCategory": "Continuous"
+          }
+        }
+      },
+      "type": "adjusted",
+      "xPos": 40,
+      "yPos": 551.25,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40
+    },
+    {
+      "id": "Diabetes",
+      "position": {
+        "x": 40,
+        "y": 366.25113784135243
+      },
+      "data": {
+        "label": "Diabetes",
+        "narrative": "Presence of diabetes mellitus. Major risk factor for severe COVID-19 and influences steroid treatment considerations.",
+        "type": "adjusted",
+        "featureSource": {
+          "sdy1662.csv": {
+            "featureID": [
+              "DIABETES"
+            ],
+            "featureCategory": "Binary"
+          }
+        }
+      },
+      "type": "adjusted",
+      "xPos": 40,
+      "yPos": 343.125,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 40,
+        "y": 366.25113784135243
+      },
+      "dragging": false
+    },
+    {
+      "id": "Hydroxychloroquine",
+      "position": {
+        "x": 580,
+        "y": 448.125
+      },
+      "data": {
+        "label": "Hydroxychloroquine",
+        "narrative": "Administration of hydroxychloroquine. Co-intervention that may affect outcomes.",
+        "type": "adjusted",
+        "featureSource": {
+          "sdy1662.csv": {
+            "featureID": [
+              "HYDROXYCHLOROQUINE"
+            ],
+            "featureCategory": "Binary"
+          }
+        }
+      },
+      "type": "adjusted",
+      "xPos": 580,
+      "yPos": 448.125,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40
+    },
+    {
+      "id": "HeartFailure",
+      "position": {
+        "x": 580,
+        "y": 1042.5
+      },
+      "data": {
+        "label": "Heart Failure",
+        "narrative": "Congestive heart failure. Major cardiovascular comorbidity affecting COVID-19 outcomes.",
+        "type": "adjusted",
+        "featureSource": {
+          "sdy1662.csv": {
+            "featureID": [
+              "CHF"
+            ],
+            "featureCategory": "Binary"
+          }
+        }
+      },
+      "type": "unadjusted",
+      "xPos": 580,
+      "yPos": 1042.5,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40,
+      "selected": true,
+      "dragging": false
+    },
+    {
+      "id": "CoronaryArteryDisease",
+      "position": {
+        "x": 40,
+        "y": 1016.25
+      },
+      "data": {
+        "label": "Coronary Artery Disease",
+        "narrative": "Presence of coronary artery disease. Cardiovascular risk factor for COVID-19 mortality.",
+        "type": "adjusted",
+        "featureSource": {
+          "sdy1662.csv": {
+            "featureID": [
+              "CORONARY_ARTERY_DISEASE"
+            ],
+            "featureCategory": "Binary"
+          }
+        }
+      },
+      "type": "unadjusted",
+      "xPos": 40,
+      "yPos": 1016.25,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40,
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "ChronicLungDisease",
+      "position": {
+        "x": 40,
+        "y": 1083.75
+      },
+      "data": {
+        "label": "Chronic Lung Disease",
+        "narrative": "Chronic pulmonary diseases including COPD and asthma. Affects respiratory function and COVID-19 severity.",
+        "type": "adjusted",
+        "featureSource": {
+          "sdy1662.csv": {
+            "featureID": [
+              "COPD"
+            ],
+            "featureCategory": "Binary"
+          }
+        }
+      },
+      "type": "unadjusted",
+      "xPos": 40,
+      "yPos": 1083.75,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40,
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "ChronicKidneyDisease",
+      "position": {
+        "x": 580,
+        "y": 975
+      },
+      "data": {
+        "label": "Chronic Kidney Disease",
+        "narrative": "Chronic kidney disease. Affects drug metabolism and is associated with worse COVID-19 outcomes.",
+        "type": "adjusted",
+        "featureSource": {
+          "sdy1662.csv": {
+            "featureID": [
+              "CKD"
+            ],
+            "featureCategory": "Binary"
+          }
+        }
+      },
+      "type": "adjusted",
+      "xPos": 580,
+      "yPos": 975,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40,
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "Cancer",
+      "position": {
+        "x": 42.73870082899839,
+        "y": 1152.5347854356305
+      },
+      "data": {
+        "label": "Cancer",
+        "narrative": "Cancer diagnosis. May indicate immunocompromised status affecting treatment response.",
+        "type": "adjusted",
+        "featureSource": {
+          "sdy1662.csv": {
+            "featureID": [
+              "CANCER_FLAG"
+            ],
+            "featureCategory": "Binary"
+          }
+        }
+      },
+      "type": "unadjusted",
+      "xPos": 40,
+      "yPos": 1151.25,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 42.73870082899839,
+        "y": 1152.5347854356305
+      },
+      "dragging": false
+    },
+    {
+      "id": "OxygenSaturation",
+      "position": {
+        "x": 220,
+        "y": 933.75
+      },
+      "data": {
+        "label": "Oxygen Saturation",
+        "narrative": "Minimum oxygen saturation level. Key indicator of respiratory function and COVID-19 severity.",
+        "type": "adjusted",
+        "featureSource": {
+          "sdy1662.csv": {
+            "featureID": [
+              "O2SAT_MIN"
+            ],
+            "featureCategory": "Continuous"
+          }
+        }
+      },
+      "type": "adjusted",
+      "xPos": 220,
+      "yPos": 933.75,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40
+    },
+    {
+      "id": "RespiratoryRate",
+      "position": {
+        "x": 220,
+        "y": 654.375
+      },
+      "data": {
+        "label": "Respiratory Rate",
+        "narrative": "Maximum respiratory rate. Elevated rates indicate respiratory distress and disease severity.",
+        "type": "adjusted",
+        "featureSource": {
+          "sdy1662.csv": {
+            "featureID": [
+              "RESP_RATE_MAX"
+            ],
+            "featureCategory": "Continuous"
+          }
+        }
+      },
+      "type": "adjusted",
+      "xPos": 220,
+      "yPos": 654.375,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40
+    },
+    {
+      "id": "InflammatoryMarkers",
+      "position": {
+        "x": 220,
+        "y": 721.875
+      },
+      "data": {
+        "label": "Inflammatory Markers",
+        "narrative": "Inflammatory markers including CRP and ferritin indicating systemic inflammation severity.",
+        "type": "adjusted",
+        "featureSource": {
+          "sdy1662.csv": {
+            "featureID": [
+              "CRP_LOG2"
+            ],
+            "featureCategory": "Continuous"
+          }
+        }
+      },
+      "type": "adjusted",
+      "xPos": 220,
+      "yPos": 721.875,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40
+    },
+    {
+      "id": "ARDS",
+      "position": {
+        "x": 580,
+        "y": 680.625
+      },
+      "data": {
+        "label": "ARDS",
+        "narrative": "Acute respiratory distress syndrome. Severe complication of COVID-19 requiring intensive support.",
+        "type": "unadjusted",
+        "featureSource": {
+          "sdy1662.csv": {
+            "featureID": [
+              "ARDS"
+            ],
+            "featureCategory": "Binary"
+          }
+        }
+      },
+      "type": "unadjusted",
+      "xPos": 580,
+      "yPos": 680.625,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40
+    },
+    {
+      "id": "Steroids",
+      "position": {
+        "x": 400,
+        "y": 735
+      },
+      "data": {
+        "label": "Steroids",
+        "narrative": "Administration of steroids (glucocorticoids) during hospitalization. Primary intervention of interest.",
+        "type": "action",
+        "featureSource": {
+          "sdy1662.csv": {
+            "featureID": [
+              "STEROIDS"
+            ],
+            "featureCategory": "Binary"
+          }
+        }
+      },
+      "type": "action",
+      "xPos": 400,
+      "yPos": 735,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40
+    },
+    {
+      "id": "Remdesivir",
+      "position": {
+        "x": 580,
+        "y": 761.25
+      },
+      "data": {
+        "label": "Remdesivir",
+        "narrative": "Administration of remdesivir. Antiviral treatment that may modify outcomes.",
+        "type": "adjusted",
+        "featureSource": {
+          "sdy1662.csv": {
+            "featureID": [
+              "REMDESIVIR"
+            ],
+            "featureCategory": "Binary"
+          }
+        }
+      },
+      "type": "adjusted",
+      "xPos": 580,
+      "yPos": 761.25,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40
+    },
+    {
+      "id": "Anticoagulants",
+      "position": {
+        "x": 580,
+        "y": 613.125
+      },
+      "data": {
+        "label": "Anticoagulants",
+        "narrative": "Use of anticoagulants. May prevent thrombotic complications in COVID-19.",
+        "type": "unadjusted",
+        "featureSource": {
+          "sdy1662.csv": {
+            "featureID": [
+              "ANTICOAGULANTS"
+            ],
+            "featureCategory": "Binary"
+          }
+        }
+      },
+      "type": "unadjusted",
+      "xPos": 580,
+      "yPos": 613.125,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40
+    },
+    {
+      "id": "Mortality",
+      "position": {
+        "x": 760,
+        "y": 810
+      },
+      "data": {
+        "label": "Mortality",
+        "narrative": "All-cause mortality during hospitalization or follow-up. Primary outcome of interest.",
+        "type": "outcome",
+        "featureSource": {
+          "sdy1662.csv": {
+            "featureID": [
+              "DEATH"
+            ],
+            "featureCategory": "Binary"
+          }
+        }
+      },
+      "type": "outcome",
+      "xPos": 760,
+      "yPos": 810,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40
+    }
+  ],
+  "edges": [
+    {
+      "id": "Age->OxygenSaturation",
+      "source": "Age",
+      "target": "OxygenSaturation",
+      "targetHandle": "left",
+      "type": "default",
+      "updatable": true,
+      "data": {
+        "narrative": "Older age is associated with worse respiratory function due to immunosenescence and reduced physiologic reserve."
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      }
+    },
+    {
+      "id": "Age->Steroids",
+      "source": "Age",
+      "target": "Steroids",
+      "targetHandle": "left",
+      "type": "default",
+      "updatable": true,
+      "data": {
+        "narrative": "Age may influence treatment decisions, with clinicians considering age-related risks and benefits."
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      }
+    },
+    {
+      "id": "Age->Mortality",
+      "source": "Age",
+      "target": "Mortality",
+      "targetHandle": "left",
+      "type": "default",
+      "updatable": true,
+      "data": {
+        "narrative": "Advanced age directly increases mortality risk through reduced physiologic reserve and higher comorbidity burden."
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      }
+    },
+    {
+      "id": "Sex->InflammatoryMarkers",
+      "source": "Sex",
+      "target": "InflammatoryMarkers",
+      "targetHandle": "left",
+      "type": "default",
+      "updatable": true,
+      "data": {
+        "narrative": "Male sex is associated with higher inflammatory response in COVID-19."
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      }
+    },
+    {
+      "id": "Race->Steroids",
+      "source": "Race",
+      "target": "Steroids",
+      "targetHandle": "left",
+      "type": "default",
+      "updatable": true,
+      "data": {
+        "narrative": "Healthcare disparities may influence treatment access and decisions across racial groups."
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      }
+    },
+    {
+      "id": "BMI->OxygenSaturation",
+      "source": "BMI",
+      "target": "OxygenSaturation",
+      "targetHandle": "left",
+      "type": "default",
+      "updatable": true,
+      "data": {
+        "narrative": "Obesity mechanically compromises respiratory function and worsens hypoxemia."
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      }
+    },
+    {
+      "id": "Diabetes->InflammatoryMarkers",
+      "source": "Diabetes",
+      "target": "InflammatoryMarkers",
+      "targetHandle": "left",
+      "type": "default",
+      "updatable": true,
+      "data": {
+        "narrative": "Diabetes promotes inflammatory response and immune dysregulation in COVID-19."
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      }
+    },
+    {
+      "id": "Diabetes->Mortality",
+      "source": "Diabetes",
+      "target": "Mortality",
+      "targetHandle": "left",
+      "type": "default",
+      "updatable": true,
+      "data": {
+        "narrative": "Diabetes independently increases mortality risk through metabolic derangements and vascular complications."
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      }
+    },
+    {
+      "id": "HeartFailure->Mortality",
+      "source": "HeartFailure",
+      "target": "Mortality",
+      "targetHandle": "left",
+      "type": "default",
+      "updatable": true,
+      "data": {
+        "narrative": "Heart failure directly increases mortality risk through reduced cardiac reserve."
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      }
+    },
+    {
+      "id": "ChronicLungDisease->OxygenSaturation",
+      "source": "ChronicLungDisease",
+      "target": "OxygenSaturation",
+      "targetHandle": "left",
+      "type": "default",
+      "updatable": true,
+      "data": {
+        "narrative": "Pre-existing lung disease reduces baseline respiratory function, worsening hypoxemia."
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      }
+    },
+    {
+      "id": "ChronicKidneyDisease->Mortality",
+      "source": "ChronicKidneyDisease",
+      "target": "Mortality",
+      "targetHandle": "left",
+      "type": "default",
+      "updatable": true,
+      "data": {
+        "narrative": "CKD increases mortality through metabolic complications and reduced drug clearance."
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      }
+    },
+    {
+      "id": "OxygenSaturation->Steroids",
+      "source": "OxygenSaturation",
+      "target": "Steroids",
+      "targetHandle": "left",
+      "type": "default",
+      "updatable": true,
+      "data": {
+        "narrative": "Hypoxemia is a key criterion for steroid initiation per COVID-19 treatment guidelines."
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      }
+    },
+    {
+      "id": "OxygenSaturation->Mortality",
+      "source": "OxygenSaturation",
+      "target": "Mortality",
+      "targetHandle": "left",
+      "type": "default",
+      "updatable": true,
+      "data": {
+        "narrative": "Severe hypoxemia directly increases mortality risk through tissue hypoxia."
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      }
+    },
+    {
+      "id": "RespiratoryRate->Steroids",
+      "source": "RespiratoryRate",
+      "target": "Steroids",
+      "targetHandle": "left",
+      "type": "default",
+      "updatable": true,
+      "data": {
+        "narrative": "Tachypnea indicates respiratory distress prompting steroid consideration."
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      }
+    },
+    {
+      "id": "InflammatoryMarkers->Steroids",
+      "source": "InflammatoryMarkers",
+      "target": "Steroids",
+      "targetHandle": "left",
+      "type": "default",
+      "updatable": true,
+      "data": {
+        "narrative": "Elevated inflammatory markers may prompt anti-inflammatory steroid therapy."
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      }
+    },
+    {
+      "id": "InflammatoryMarkers->Mortality",
+      "source": "InflammatoryMarkers",
+      "target": "Mortality",
+      "targetHandle": "left",
+      "type": "default",
+      "updatable": true,
+      "data": {
+        "narrative": "Hyperinflammation drives organ dysfunction and mortality in severe COVID-19."
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      }
+    },
+    {
+      "id": "Steroids->Mortality",
+      "source": "Steroids",
+      "target": "Mortality",
+      "targetHandle": "left",
+      "type": "causal",
+      "updatable": true,
+      "data": {
+        "narrative": "Steroids may reduce mortality by modulating hyperinflammation in severe COVID-19."
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#00dfa7"
+      }
+    },
+    {
+      "id": "Hydroxychloroquine->Mortality",
+      "source": "Hydroxychloroquine",
+      "target": "Mortality",
+      "targetHandle": "left",
+      "type": "default",
+      "updatable": true,
+      "data": {
+        "narrative": "Hydroxychloroquine treatment may affect mortality, though evidence suggests limited benefit."
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      }
+    },
+    {
+      "id": "Remdesivir->Mortality",
+      "source": "Remdesivir",
+      "target": "Mortality",
+      "targetHandle": "left",
+      "type": "default",
+      "updatable": true,
+      "data": {
+        "narrative": "Remdesivir may reduce mortality through antiviral effects, particularly early in disease course."
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      }
+    },
+    {
+      "id": "Steroids->ARDS",
+      "source": "Steroids",
+      "target": "ARDS",
+      "targetHandle": "left",
+      "type": "causal",
+      "updatable": true,
+      "data": {
+        "narrative": "Steroids may prevent or ameliorate ARDS by reducing inflammatory lung injury."
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#00dfa7"
+      }
+    },
+    {
+      "id": "ARDS->Mortality",
+      "source": "ARDS",
+      "target": "Mortality",
+      "targetHandle": "left",
+      "type": "causal",
+      "updatable": true,
+      "data": {
+        "narrative": "ARDS significantly increases mortality risk through severe respiratory failure."
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#00dfa7"
+      }
+    },
+    {
+      "id": "Anticoagulants->Mortality",
+      "source": "Anticoagulants",
+      "target": "Mortality",
+      "targetHandle": "left",
+      "type": "default",
+      "updatable": true,
+      "data": {
+        "narrative": "Anticoagulation may reduce mortality by preventing thrombotic complications."
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      }
+    }
+  ]
+}

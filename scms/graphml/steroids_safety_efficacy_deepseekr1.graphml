@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns
+         http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="narrative" for="node" attr.name="narrative" attr.type="string"/>
+  <key id="narrative" for="edge" attr.name="narrative" attr.type="string"/>
+  <key id="label" for="node" attr.name="label" attr.type="string"/>
+  <key id="type" for="node" attr.name="type" attr.type="string"/>
+  <key id="featureSource" for="node" attr.name="featureSource" attr.type="string"/>
+  
+  <graph id="SteroidsSafetyEfficacy" edgedefault="directed">
+    <!-- Action: Steroid Treatment -->
+    <node id="SteroidTreatment">
+      <data key="narrative">Administration of steroid treatment (binary: treated/not treated)</data>
+      <data key="label">Steroid Treatment</data>
+      <data key="type">action</data>
+      <data key="featureSource">{"sdy1662.csv":{"featureID":["STEROIDS"],"featureCategory":"Binary"},"sdy1760.csv":{"featureID":["STEROIDS"],"featureCategory":"Binary"}}</data>
+    </node>
+    
+    <!-- Outcome: 28-Day Survival -->
+    <node id="Survival28Day">
+      <data key="narrative">Patient death status</data>
+      <data key="label">Death</data>
+      <data key="type">outcome</data>
+      <data key="featureSource">{"sdy1662.csv":{"featureID":["DEATH"],"featureCategory":"Binary"},"sdy1760.csv":{"featureID":["DEATH"],"featureCategory":"Binary"}}</data>
+    </node>
+    
+    <!-- Confounders -->
+    <node id="Age">
+      <data key="narrative">Patient age at hospitalization</data>
+      <data key="label">Age</data>
+      <data key="type">adjusted</data>
+      <data key="featureSource">{"sdy1662.csv":{"featureID":["AGE"],"featureCategory":"Continuous"},"sdy1760.csv":{"featureID":["AGE"],"featureCategory":"Continuous"}}</data>
+    </node>
+    
+    <node id="DiseaseSeverity">
+      <data key="narrative">Severity of illness at admission (1-3 scale)</data>
+      <data key="label">Disease Severity</data>
+      <data key="type">adjusted</data>
+      <data key="featureSource">{"sdy1662.csv":{"featureID":["SEVERITY_NUMERIC"],"featureCategory":"Ordinal"},"sdy1760.csv":{"featureID":["BASELINE_SEVERITY"],"featureCategory":"Ordinal"}}</data>
+    </node>
+    
+    <!-- Mediators -->
+    <node id="CRP">
+      <data key="narrative">Level of C-reactive protein (CRP), an inflammatory marker</data>
+      <data key="label">CRP</data>
+      <data key="type">adjusted</data>
+      <data key="featureSource">{"sdy1662.csv":{"featureID":["CRP"],"featureCategory":"Continuous"},"sdy1760.csv":{"featureID":["BASELINE_CRP"],"featureCategory":"Continuous"}}</data>
+    </node>
+
+    <!-- Causal Relationships -->
+    <edge id="e1" source="Age" target="SteroidTreatment">
+      <data key="narrative">Age affects likelihood of receiving steroid treatment</data>
+    </edge>
+    
+    <edge id="e2" source="DiseaseSeverity" target="SteroidTreatment">
+      <data key="narrative">Disease severity influences treatment decisions</data>
+    </edge>
+    
+    <edge id="e4" source="SteroidTreatment" target="CRP">
+      <data key="narrative">Steroid treatment modulates CRP levels</data>
+    </edge>
+
+    <edge id="e5" source="CRP" target="Survival28Day">
+      <data key="narrative">CRP levels affect survival outcomes</data>
+    </edge>
+
+    <edge id="e6" source="Age" target="Survival28Day">
+      <data key="narrative">Age directly impacts survival probability</data>
+    </edge>
+    
+    <edge id="e7" source="DiseaseSeverity" target="Survival28Day">
+      <data key="narrative">Disease severity directly affects mortality risk</data>
+    </edge>
+    
+    <edge id="e9" source="SteroidTreatment" target="Survival28Day">
+      <data key="narrative">Direct effect of steroid treatment on survival</data>
+    </edge>
+  </graph>
+</graphml>

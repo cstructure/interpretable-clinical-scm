@@ -1,0 +1,267 @@
+{
+  "nodes": [
+    {
+      "id": "2024-08-14T15:23:19.542Z",
+      "position": {
+        "x": 220,
+        "y": 150
+      },
+      "data": {
+        "label": "Survival",
+        "narrative": "Includes O2_sat",
+        "type": "outcome",
+        "featureSource": {
+          "SDY1662": {
+            "featureID": [
+              "DEATH"
+            ],
+            "featureCategory": "Binary"
+          }
+        }
+      },
+      "type": "outcome",
+      "xPos": 220,
+      "yPos": 150,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40
+    },
+    {
+      "id": "2024-08-14T15:23:58.908Z",
+      "position": {
+        "x": -70.107657420073,
+        "y": 49.81345050781721
+      },
+      "data": {
+        "label": "Age",
+        "narrative": "Patient age as a confounding variable affecting both treatment assignment and survival outcomes",
+        "type": "adjusted",
+        "featureSource": {
+          "SDY1662": {
+            "featureID": [
+              "AGE"
+            ],
+            "featureCategory": "Continuous"
+          }
+        }
+      },
+      "type": "adjusted",
+      "xPos": 40,
+      "yPos": 15,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40,
+      "selected": false,
+      "positionAbsolute": {
+        "x": -70.107657420073,
+        "y": 49.81345050781721
+      },
+      "dragging": false
+    },
+    {
+      "id": "2024-08-14T15:24:28.759Z",
+      "position": {
+        "x": 33.52307897528988,
+        "y": 4.776947703477873
+      },
+      "data": {
+        "label": "Steroid Treatment",
+        "narrative": "Steroid treatment intervention for COVID-19 patients",
+        "type": "action",
+        "featureSource": {
+          "SDY1662": {
+            "featureID": [
+              "STEROIDS"
+            ],
+            "featureCategory": "Binary"
+          }
+        }
+      },
+      "type": "action",
+      "xPos": 40,
+      "yPos": 82.5,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 33.52307897528988,
+        "y": 4.776947703477873
+      },
+      "dragging": false
+    },
+    {
+      "id": "2024-08-14T16:25:58.695Z",
+      "position": {
+        "x": -97.63457177509122,
+        "y": 145.14230923146738
+      },
+      "data": {
+        "label": "O2_SAT",
+        "narrative": "Minimum oxygen saturation level, indicator of disease severity",
+        "type": "adjusted",
+        "featureSource": {
+          "SDY1662": {
+            "featureID": [
+              "O2SAT_MIN"
+            ],
+            "featureCategory": "Continuous"
+          }
+        }
+      },
+      "type": "adjusted",
+      "xPos": 40,
+      "yPos": 150,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40,
+      "selected": false,
+      "positionAbsolute": {
+        "x": -97.63457177509122,
+        "y": 145.14230923146738
+      },
+      "dragging": false
+    },
+    {
+      "id": "2024-08-14T19:30:41.565Z",
+      "position": {
+        "x": -123.54225587393199,
+        "y": 216.69038487191125
+      },
+      "data": {
+        "label": "Gender",
+        "narrative": "Patient gender as a potential confounding variable",
+        "type": "adjusted",
+        "featureSource": {
+          "SDY1662": {
+            "featureID": [
+              "GENDER"
+            ],
+            "featureCategory": "Binary"
+          }
+        }
+      },
+      "type": "adjusted",
+      "xPos": 40,
+      "yPos": 217.5,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40,
+      "selected": false,
+      "positionAbsolute": {
+        "x": -123.54225587393199,
+        "y": 216.69038487191125
+      },
+      "dragging": false
+    },
+    {
+      "id": "2024-08-14T19:54:01.346Z",
+      "position": {
+        "x": -75.77496331669448,
+        "y": 283.38076974382244
+      },
+      "data": {
+        "label": "BMI",
+        "narrative": "Body Mass Index as a confounding variable related to COVID-19 outcomes",
+        "type": "adjusted",
+        "featureSource": {
+          "SDY1662": {
+            "featureID": [
+              "BMI"
+            ],
+            "featureCategory": "Continuous"
+          }
+        }
+      },
+      "type": "adjusted",
+      "xPos": 40,
+      "yPos": 285,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40,
+      "selected": false,
+      "positionAbsolute": {
+        "x": -75.77496331669448,
+        "y": 283.38076974382244
+      },
+      "dragging": false
+    }
+  ],
+  "edges": [
+    {
+      "id": "2024-08-14T15:23:58.908Z->2024-08-14T15:23:19.542Z",
+      "source": "2024-08-14T15:23:58.908Z",
+      "target": "2024-08-14T15:23:19.542Z",
+      "targetHandle": "left",
+      "type": "default",
+      "updatable": true,
+      "data": {
+        "narrative": "This is the dependence of survival on the age"
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      }
+    },
+    {
+      "id": "2024-08-14T15:24:28.759Z->2024-08-14T15:23:19.542Z",
+      "source": "2024-08-14T15:24:28.759Z",
+      "target": "2024-08-14T15:23:19.542Z",
+      "targetHandle": "left",
+      "type": "causal",
+      "updatable": true,
+      "data": {
+        "narrative": "Causal effect of steroid treatment on survival with risk ratio of 1.0199"
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#00dfa7"
+      }
+    },
+    {
+      "id": "2024-08-14T16:25:58.695Z->2024-08-14T15:23:19.542Z",
+      "source": "2024-08-14T16:25:58.695Z",
+      "target": "2024-08-14T15:23:19.542Z",
+      "targetHandle": "left",
+      "type": "default",
+      "updatable": true,
+      "data": {
+        "narrative": "Oxygen saturation level affects patient survival outcomes"
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      }
+    },
+    {
+      "id": "2024-08-14T19:30:41.565Z->2024-08-14T15:23:19.542Z",
+      "source": "2024-08-14T19:30:41.565Z",
+      "target": "2024-08-14T15:23:19.542Z",
+      "targetHandle": "left",
+      "type": "default",
+      "updatable": true,
+      "data": {
+        "narrative": "Gender influences survival outcomes in COVID-19 patients"
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      }
+    },
+    {
+      "id": "2024-08-14T19:54:01.346Z->2024-08-14T15:23:19.542Z",
+      "source": "2024-08-14T19:54:01.346Z",
+      "target": "2024-08-14T15:23:19.542Z",
+      "targetHandle": "left",
+      "type": "default",
+      "updatable": true,
+      "data": {
+        "narrative": "BMI affects survival outcomes in COVID-19 patients"
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      }
+    }
+  ]
+}

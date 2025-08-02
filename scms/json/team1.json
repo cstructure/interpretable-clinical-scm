@@ -1,0 +1,743 @@
+{
+  "nodes": [
+    {
+      "id": "2025-07-25T11:17:42.995Z",
+      "position": {
+        "x": 71.3106192861899,
+        "y": 67.44953357830354
+      },
+      "data": {
+        "openModal": false,
+        "label": "Steroids",
+        "featureSource": {
+          "sdy1662.csv": {
+            "featureID": [
+              "STEROIDS"
+            ],
+            "featureCategory": "Binary"
+          }
+        }
+      },
+      "type": "action",
+      "xPos": -200,
+      "yPos": 150,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 71.3106192861899,
+        "y": 67.44953357830354
+      },
+      "dragging": false
+    },
+    {
+      "id": "2025-07-25T11:17:43.395Z",
+      "position": {
+        "x": -229.9559237046412,
+        "y": 204.09544956851522
+      },
+      "data": {
+        "openModal": false,
+        "label": "Smoking"
+      },
+      "type": "unadjusted",
+      "xPos": -200,
+      "yPos": 150,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40,
+      "selected": false,
+      "positionAbsolute": {
+        "x": -229.9559237046412,
+        "y": 204.09544956851522
+      },
+      "dragging": false
+    },
+    {
+      "id": "2025-07-25T11:17:43.651Z",
+      "position": {
+        "x": -371.9008067195625,
+        "y": 273.70409656875836
+      },
+      "data": {
+        "openModal": false,
+        "label": "CKD"
+      },
+      "type": "unadjusted",
+      "xPos": -200,
+      "yPos": 150,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40,
+      "selected": false,
+      "positionAbsolute": {
+        "x": -371.9008067195625,
+        "y": 273.70409656875836
+      },
+      "dragging": false
+    },
+    {
+      "id": "2025-07-25T11:17:43.920Z",
+      "position": {
+        "x": -474.444769877542,
+        "y": 357.0870401621977
+      },
+      "data": {
+        "openModal": false,
+        "label": "Coronary Disease"
+      },
+      "type": "unadjusted",
+      "xPos": -200,
+      "yPos": 150,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40,
+      "selected": false,
+      "positionAbsolute": {
+        "x": -474.444769877542,
+        "y": 357.0870401621977
+      },
+      "dragging": false
+    },
+    {
+      "id": "2025-07-25T11:17:44.174Z",
+      "position": {
+        "x": 204.3397517153624,
+        "y": 165.31477063911032
+      },
+      "data": {
+        "openModal": false,
+        "label": "Covid Survival rate",
+        "featureSource": {
+          "sdy1662.csv": {
+            "featureID": [
+              "DEATH"
+            ],
+            "featureCategory": "Binary"
+          }
+        }
+      },
+      "type": "outcome",
+      "xPos": -200,
+      "yPos": 150,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 204.3397517153624,
+        "y": 165.31477063911032
+      },
+      "dragging": false
+    },
+    {
+      "id": "2025-07-25T11:17:44.385Z",
+      "position": {
+        "x": -82.71603541473591,
+        "y": 115.92527797166568
+      },
+      "data": {
+        "openModal": false,
+        "label": "Severity",
+        "featureSource": {
+          "sdy1662.csv": {
+            "featureID": [
+              "O2SAT_MIN"
+            ],
+            "featureCategory": "Continuous"
+          }
+        }
+      },
+      "type": "adjusted",
+      "xPos": -200,
+      "yPos": 150,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40,
+      "selected": false,
+      "positionAbsolute": {
+        "x": -82.71603541473591,
+        "y": 115.92527797166568
+      },
+      "dragging": false
+    },
+    {
+      "id": "2025-07-25T11:17:44.625Z",
+      "position": {
+        "x": -372.0162586372025,
+        "y": 358.13015722770297
+      },
+      "data": {
+        "openModal": false,
+        "label": "Diabetes"
+      },
+      "type": "unadjusted",
+      "xPos": -200,
+      "yPos": 150,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40,
+      "selected": false,
+      "positionAbsolute": {
+        "x": -372.0162586372025,
+        "y": 358.13015722770297
+      },
+      "dragging": false
+    },
+    {
+      "id": "2025-07-25T11:17:44.835Z",
+      "position": {
+        "x": -83.47500928359793,
+        "y": 229.73861982305993
+      },
+      "data": {
+        "openModal": false,
+        "label": "SBP",
+        "featureSource": {
+          "sdy1662.csv": {
+            "featureID": [
+              "SYSTOL_BP_MAX"
+            ],
+            "featureCategory": "Continuous"
+          }
+        }
+      },
+      "type": "adjusted",
+      "xPos": -200,
+      "yPos": 150,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40,
+      "selected": false,
+      "positionAbsolute": {
+        "x": -83.47500928359793,
+        "y": 229.73861982305993
+      },
+      "dragging": false
+    },
+    {
+      "id": "2025-07-25T11:17:45.099Z",
+      "position": {
+        "x": -472.3856105428236,
+        "y": 273.18576528097014
+      },
+      "data": {
+        "openModal": false,
+        "label": "Alcohol"
+      },
+      "type": "unadjusted",
+      "xPos": -200,
+      "yPos": 150,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40,
+      "selected": false,
+      "positionAbsolute": {
+        "x": -472.3856105428236,
+        "y": 273.18576528097014
+      },
+      "dragging": false
+    },
+    {
+      "id": "2025-07-25T11:17:45.272Z",
+      "position": {
+        "x": -303.22655865413054,
+        "y": 40.5955443961891
+      },
+      "data": {
+        "openModal": false,
+        "label": "Age",
+        "featureSource": {
+          "sdy1662.csv": {
+            "featureID": [
+              "AGE"
+            ],
+            "featureCategory": "Continuous"
+          }
+        }
+      },
+      "type": "adjusted",
+      "xPos": -200,
+      "yPos": 150,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40,
+      "selected": false,
+      "positionAbsolute": {
+        "x": -303.22655865413054,
+        "y": 40.5955443961891
+      },
+      "dragging": false
+    },
+    {
+      "id": "2025-07-25T11:17:45.480Z",
+      "position": {
+        "x": -87.29112409882305,
+        "y": -0.6198069293201058
+      },
+      "data": {
+        "openModal": false,
+        "label": "Glucose",
+        "featureSource": {
+          "sdy1662.csv": {
+            "featureID": [
+              "GLUCOSE"
+            ],
+            "featureCategory": "Continuous"
+          }
+        }
+      },
+      "type": "adjusted",
+      "xPos": -200,
+      "yPos": 150,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40,
+      "selected": false,
+      "positionAbsolute": {
+        "x": -87.29112409882305,
+        "y": -0.6198069293201058
+      },
+      "dragging": false
+    },
+    {
+      "id": "2025-07-25T11:17:45.661Z",
+      "position": {
+        "x": -297.90099835933415,
+        "y": 132.0932189209328
+      },
+      "data": {
+        "openModal": false,
+        "label": "BMI",
+        "featureSource": {
+          "sdy1662.csv": {
+            "featureID": [
+              "BMI"
+            ],
+            "featureCategory": "Continuous"
+          }
+        }
+      },
+      "type": "adjusted",
+      "xPos": -200,
+      "yPos": 150,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40,
+      "selected": false,
+      "positionAbsolute": {
+        "x": -297.90099835933415,
+        "y": 132.0932189209328
+      },
+      "dragging": false
+    },
+    {
+      "id": "2025-07-25T11:21:24.423Z",
+      "position": {
+        "x": -479.14314110534775,
+        "y": 534.8651281020576
+      },
+      "data": {
+        "openModal": false,
+        "label": "COPD"
+      },
+      "type": "unadjusted",
+      "xPos": -200,
+      "yPos": 150,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40,
+      "selected": false,
+      "positionAbsolute": {
+        "x": -479.14314110534775,
+        "y": 534.8651281020576
+      },
+      "dragging": false
+    },
+    {
+      "id": "2025-07-25T11:21:24.672Z",
+      "position": {
+        "x": -371.5663824069413,
+        "y": 442.12654301722444
+      },
+      "data": {
+        "openModal": false,
+        "label": "Asthma"
+      },
+      "type": "unadjusted",
+      "xPos": -200,
+      "yPos": 150,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40,
+      "selected": false,
+      "positionAbsolute": {
+        "x": -371.5663824069413,
+        "y": 442.12654301722444
+      },
+      "dragging": false
+    },
+    {
+      "id": "2025-07-25T11:21:24.891Z",
+      "position": {
+        "x": -476.36098355280274,
+        "y": 445.8360864206177
+      },
+      "data": {
+        "openModal": false,
+        "label": "Sleep Apnea"
+      },
+      "type": "unadjusted",
+      "xPos": -200,
+      "yPos": 150,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40,
+      "selected": false,
+      "positionAbsolute": {
+        "x": -476.36098355280274,
+        "y": 445.8360864206177
+      },
+      "dragging": false
+    }
+  ],
+  "edges": [
+    {
+      "id": "2025-07-25T11:17:42.995Z->2025-07-25T11:17:44.174Z",
+      "targetHandle": "left",
+      "style": {
+        "strokeWidth": 0.75
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#00dfa7"
+      },
+      "interactionWidth": 20,
+      "updatable": true,
+      "source": "2025-07-25T11:17:42.995Z",
+      "sourceHandle": "right",
+      "target": "2025-07-25T11:17:44.174Z",
+      "type": "causal"
+    },
+    {
+      "id": "2025-07-25T11:17:45.480Z->2025-07-25T11:17:42.995Z",
+      "targetHandle": "left",
+      "style": {
+        "strokeWidth": 0.75
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      },
+      "interactionWidth": 20,
+      "updatable": true,
+      "source": "2025-07-25T11:17:45.480Z",
+      "sourceHandle": "right",
+      "target": "2025-07-25T11:17:42.995Z",
+      "type": "default"
+    },
+    {
+      "id": "2025-07-25T11:17:44.385Z->2025-07-25T11:17:42.995Z",
+      "targetHandle": "left",
+      "style": {
+        "strokeWidth": 0.75
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      },
+      "interactionWidth": 20,
+      "updatable": true,
+      "source": "2025-07-25T11:17:44.385Z",
+      "sourceHandle": "right",
+      "target": "2025-07-25T11:17:42.995Z",
+      "type": "default"
+    },
+    {
+      "id": "2025-07-25T11:17:44.835Z->2025-07-25T11:17:42.995Z",
+      "targetHandle": "left",
+      "style": {
+        "strokeWidth": 0.75
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      },
+      "interactionWidth": 20,
+      "updatable": true,
+      "source": "2025-07-25T11:17:44.835Z",
+      "sourceHandle": "right",
+      "target": "2025-07-25T11:17:42.995Z",
+      "type": "default"
+    },
+    {
+      "id": "2025-07-25T11:17:43.395Z->2025-07-25T11:17:44.385Z",
+      "targetHandle": "left",
+      "style": {
+        "strokeWidth": 0.75
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      },
+      "interactionWidth": 20,
+      "updatable": true,
+      "source": "2025-07-25T11:17:43.395Z",
+      "sourceHandle": "right",
+      "target": "2025-07-25T11:17:44.385Z",
+      "type": "default"
+    },
+    {
+      "id": "2025-07-25T11:17:44.385Z->2025-07-25T11:17:44.174Z",
+      "targetHandle": "left",
+      "style": {
+        "strokeWidth": 0.75
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      },
+      "interactionWidth": 20,
+      "updatable": true,
+      "source": "2025-07-25T11:17:44.385Z",
+      "sourceHandle": "right",
+      "target": "2025-07-25T11:17:44.174Z",
+      "type": "default"
+    },
+    {
+      "id": "2025-07-25T11:17:44.835Z->2025-07-25T11:17:44.174Z",
+      "targetHandle": "left",
+      "style": {
+        "strokeWidth": 0.75
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      },
+      "interactionWidth": 20,
+      "updatable": true,
+      "source": "2025-07-25T11:17:44.835Z",
+      "sourceHandle": "right",
+      "target": "2025-07-25T11:17:44.174Z",
+      "type": "default"
+    },
+    {
+      "id": "2025-07-25T11:17:45.272Z->2025-07-25T11:17:42.995Z",
+      "targetHandle": "left",
+      "style": {
+        "strokeWidth": 0.75
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      },
+      "interactionWidth": 20,
+      "updatable": true,
+      "source": "2025-07-25T11:17:45.272Z",
+      "sourceHandle": "right",
+      "target": "2025-07-25T11:17:42.995Z",
+      "type": "default"
+    },
+    {
+      "id": "2025-07-25T11:17:45.272Z->2025-07-25T11:17:44.385Z",
+      "targetHandle": "left",
+      "style": {
+        "strokeWidth": 0.75
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      },
+      "interactionWidth": 20,
+      "updatable": true,
+      "source": "2025-07-25T11:17:45.272Z",
+      "sourceHandle": "right",
+      "target": "2025-07-25T11:17:44.385Z",
+      "type": "default"
+    },
+    {
+      "id": "2025-07-25T11:17:45.272Z->2025-07-25T11:17:44.835Z",
+      "targetHandle": "left",
+      "style": {
+        "strokeWidth": 0.75
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      },
+      "interactionWidth": 20,
+      "updatable": true,
+      "source": "2025-07-25T11:17:45.272Z",
+      "sourceHandle": "right",
+      "target": "2025-07-25T11:17:44.835Z",
+      "type": "default"
+    },
+    {
+      "id": "2025-07-25T11:17:45.661Z->2025-07-25T11:17:44.385Z",
+      "targetHandle": "left",
+      "style": {
+        "strokeWidth": 0.75
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      },
+      "interactionWidth": 20,
+      "updatable": true,
+      "source": "2025-07-25T11:17:45.661Z",
+      "sourceHandle": "right",
+      "target": "2025-07-25T11:17:44.385Z",
+      "type": "default"
+    },
+    {
+      "id": "2025-07-25T11:17:45.661Z->2025-07-25T11:17:44.174Z",
+      "targetHandle": "left",
+      "style": {
+        "strokeWidth": 0.75
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      },
+      "interactionWidth": 20,
+      "updatable": true,
+      "source": "2025-07-25T11:17:45.661Z",
+      "sourceHandle": "right",
+      "target": "2025-07-25T11:17:44.174Z",
+      "type": "default"
+    },
+    {
+      "id": "2025-07-25T11:17:43.651Z->2025-07-25T11:17:44.835Z",
+      "targetHandle": "left",
+      "style": {
+        "strokeWidth": 0.75
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      },
+      "interactionWidth": 20,
+      "updatable": true,
+      "source": "2025-07-25T11:17:43.651Z",
+      "sourceHandle": "right",
+      "target": "2025-07-25T11:17:44.835Z",
+      "type": "default"
+    },
+    {
+      "id": "2025-07-25T11:17:45.099Z->2025-07-25T11:17:44.835Z",
+      "targetHandle": "left",
+      "style": {
+        "strokeWidth": 0.75
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      },
+      "interactionWidth": 20,
+      "updatable": true,
+      "source": "2025-07-25T11:17:45.099Z",
+      "sourceHandle": "right",
+      "target": "2025-07-25T11:17:44.835Z",
+      "type": "default"
+    },
+    {
+      "id": "2025-07-25T11:17:44.625Z->2025-07-25T11:17:44.835Z",
+      "targetHandle": "left",
+      "style": {
+        "strokeWidth": 0.75
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      },
+      "interactionWidth": 20,
+      "updatable": true,
+      "source": "2025-07-25T11:17:44.625Z",
+      "sourceHandle": "right",
+      "target": "2025-07-25T11:17:44.835Z",
+      "type": "default"
+    },
+    {
+      "id": "2025-07-25T11:17:43.920Z->2025-07-25T11:17:44.835Z",
+      "targetHandle": "left",
+      "style": {
+        "strokeWidth": 0.75
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      },
+      "interactionWidth": 20,
+      "updatable": true,
+      "source": "2025-07-25T11:17:43.920Z",
+      "sourceHandle": "right",
+      "target": "2025-07-25T11:17:44.835Z",
+      "type": "default"
+    },
+    {
+      "id": "2025-07-25T11:21:24.672Z->2025-07-25T11:17:44.835Z",
+      "targetHandle": "left",
+      "style": {
+        "strokeWidth": 0.75
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      },
+      "interactionWidth": 20,
+      "updatable": true,
+      "source": "2025-07-25T11:21:24.672Z",
+      "sourceHandle": "right",
+      "target": "2025-07-25T11:17:44.835Z",
+      "type": "default"
+    },
+    {
+      "id": "2025-07-25T11:21:24.423Z->2025-07-25T11:17:44.835Z",
+      "source": "2025-07-25T11:21:24.423Z",
+      "target": "2025-07-25T11:17:44.835Z",
+      "targetHandle": "left",
+      "type": "default",
+      "updatable": true,
+      "data": {},
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      }
+    },
+    {
+      "id": "2025-07-25T11:17:44.625Z->2025-07-25T11:17:45.480Z",
+      "targetHandle": "left",
+      "style": {
+        "strokeWidth": 0.75
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      },
+      "interactionWidth": 20,
+      "updatable": true,
+      "source": "2025-07-25T11:17:44.625Z",
+      "sourceHandle": "right",
+      "target": "2025-07-25T11:17:45.480Z",
+      "type": "default"
+    },
+    {
+      "id": "2025-07-25T11:21:24.891Z->2025-07-25T11:17:44.835Z",
+      "targetHandle": "left",
+      "style": {
+        "strokeWidth": 0.75
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      },
+      "interactionWidth": 20,
+      "updatable": true,
+      "source": "2025-07-25T11:21:24.891Z",
+      "sourceHandle": "right",
+      "target": "2025-07-25T11:17:44.835Z",
+      "type": "default"
+    }
+  ]
+}

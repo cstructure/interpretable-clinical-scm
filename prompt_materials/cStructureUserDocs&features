@@ -1,0 +1,145 @@
+## 1. Model Specification (SCM)
+
+This section focuses on creating, reviewing, and managing your Structural Causal Model (SCM).
+
+### 1.1. Model Review Guide
+
+After constructing your initial causal diagram (e.g., via AutoSCM, import, or from scratch), a thorough review is essential. The Model sidebar facilitates this process.
+
+**Key Review Areas:**
+
+*   **Nodes:**
+    *   Represent variables in your model.
+    *   Each node needs a unique ID, a descriptive label, and a type (Action, Outcome, Adjusted, Unadjusted).
+    *   Ensure each node is correctly specified and relevant to your causal question.
+*   **Edges:**
+    *   Represent directed causal relationships.
+    *   Verify the direction and plausibility of each relationship.
+    *   Review edge narratives: These explain the reasoning behind each causal link and are crucial for understanding and evaluating the model. Narratives should be clear, concise, and supported by evidence or domain knowledge.
+*   **Arrow of Time:**
+    *   Organize your graph logically, typically left-to-right, reflecting temporal precedence. Causes should precede effects. Avoid edges that imply backward causation.
+
+**Sidebar Navigation & Management:**
+
+*   **Search Bar:** Filter nodes and edges by label to quickly find specific elements.
+*   **Node Management:**
+    *   View nodes organized by type (Action, Outcome, Adjusted, Unadjusted).
+    *   Toggle individual Node Toolbars using the eye icon for detailed interaction.
+    *   Use "Close All Toolbars" for a less cluttered view.
+    *   Switch to Table view for a structured overview of node properties.
+*   **Edge Documentation:**
+    *   View edge narratives in expandable lists.
+    *   Switch to Table view for a structured display of all edge relationships and their narratives.
+
+### 1.2. Model Sidebar Features
+
+The Model sidebar provides tools for building, refining, and managing your SCM.
+
+*   **Importing a Model:**
+    *   Start by importing an existing model structure. Supported formats include:
+        *   **CSV:** Simple format with `parent`, `child`, `edge_narrative` columns.
+        *   **GraphML:** XML-based format requiring specific node/edge attributes (id, narrative, label, type, etc.).
+        *   **Cytoscape.js (JSON):** Requires specific `nodes` and `edges` structure with data attributes.
+        *   **JSON (CStructure Schema):** A detailed format including node positions, types, narratives, forms, and edge details (source, target, type, narrative, form, priors, evidence). Ideal for restoring previously downloaded models.
+    *   Importing allows leveraging existing knowledge or collaborating on models.
+
+*   **Download SCM:**
+    *   Export your current model as a JSON file adhering to the CStructure schema.
+    *   This file includes all node and edge details, narratives, types, forms, and positions.
+    *   Useful for backups, sharing, version control, or importing into other tools or sessions.
+
+*   **Send to Jupyter:** (Assumed functionality based on title)
+    *   Export model details or structure for use within a Jupyter environment, potentially for custom analysis or integration with other Python/R workflows.
+
+*   **Narrate AI:** (Assumed functionality based on title)
+    *   Leverage AI to automatically generate descriptive narratives for nodes and edges based on their labels and relationships within the model structure. Helps accelerate the documentation process.
+
+*   **Mechanism AI:** (Assumed functionality based on title)
+    *   Utilize AI to assist in defining or suggesting potential causal mechanisms underlying the specified edge relationships, potentially drawing on external knowledge bases.
+
+*   **Auto Adjust:** (Assumed functionality based on title)
+    *   Automatically identify a sufficient adjustment set based on the graph structure, action nodes, and outcome nodes to deconfound the estimated causal effect. Marks identified nodes as 'Adjusted'.
+
+## 2. Data Layering
+
+This section covers associating your empirical data with the nodes in your SCM.
+
+### 2.1. Data Overview
+
+Data layering connects your theoretical model to real-world observations.
+
+*   **Process:** Associate each relevant node in your SCM with a specific variable (feature) from your dataset.
+*   **Importance:** Enables testing the model against data, validating assumptions, and performing statistical causal analysis.
+*   **Required Associations:** Before estimation, ensure the following node types are associated with both a data **Feature** and a **Datatype**:
+    *   Adjusted Nodes (Confounders)
+    *   Action Nodes (Treatment/Exposure)
+    *   Outcome Nodes
+*   **Variable Types:** Choose the appropriate datatype based on the nature of your variable:
+    *   **Binary:** True/False, Yes/No (e.g., treatment status, condition presence).
+    *   **Continuous:** Numerical measurements (e.g., age, blood pressure). Splines are used to capture non-linearity.
+    *   **Count:** Discrete numerical data (e.g., number of visits, event counts).
+    *   **Ordinal:** Ordered categories (e.g., disease severity, Likert scales).
+    *   **Categorical:** Unordered groups (e.g., blood type, race).
+
+### 2.2. Data Sidebar Guide
+
+Tools for managing data and performing the layering process.
+
+*   **Explorer Interface:**
+    *   **Data Upload:** Use the FileSelector or drag-and-drop files into the designated area.
+    *   **Data Management:** View files in JupyterLite storage, convert/save data (e.g., to Parquet), access integrated data exploration tools (SQL query, interactive table, charting).
+*   **Data Layering Interface:**
+    *   **Features:** Interactive table listing model nodes, searchable dropdowns for selecting data features, datatype specification per node, visual cues for required associations.
+    *   **Workflow Tips:** Use the Data Dictionary and Data Profile components to understand variables, check distributions, and be mindful of missing data or class imbalance issues which can affect analysis reliability.
+*   **Dictionary Component:**
+    *   **Features:** Upload custom data dictionaries (CSV), view variable definitions, units, collection methods, etc.
+    *   **Data Profiling:** Generate reports on variable distributions, identify quality issues, analyze missing data patterns, examine correlations. **Pro Tip:** Always review a Data Profile before finalizing variable selections.
+
+## 3. Causal Estimation
+
+This section focuses on specifying, generating code for, and running your causal analysis based on the modeled SCM and layered data.
+
+### 3.1. Getting Started (Overview)
+
+Prepare for estimation after modeling and data layering.
+
+*   **Prerequisites:**
+    *   A defined, debiased SCM.
+    *   Data features associated with all required nodes (Adjusted, Action, Outcome).
+    *   Appropriate datatypes specified for variables.
+    *   Functional forms considered (see Node Formula Management).
+    *   Data quality and completeness reviewed.
+*   **Estimate Sidebar:** Provides tools for specifying analysis parameters and generating executable code (Python/R).
+
+### 3.2. Analysis Workflow
+
+A typical workflow using the platform:
+
+1.  **Generate Analysis Code:** Use the Python (Causal Estimator) or R (gfoRmula) options based on your SCM and data layering.
+2.  **Save Your Work:** Save the generated code as a Jupyter notebook (.ipynb) or R script to your project storage.
+3.  **Review Generated Code:** Use the Notebook Viewer to inspect the analysis setup.
+4.  **Run Analysis:** Execute the Python code within the privacy-preserving JupyterLite environment.
+5.  **Review Analysis:** Examine results from previously run analyses using the Notebook Viewer.
+
+### 3.3. Sidebar Features
+
+Tools within the Estimate sidebar:
+
+*   **Node Formula Management:**
+    *   Batch update functional forms for nodes based on graph structure and adjustment status.
+    *   **Warning:** Using 'Update All Node Formulas' overwrites existing formulas; consider saving a snapshot first.
+*   **History Snapshot Viewer:**
+    *   Access and review previously saved versions (snapshots) of your model.
+    *   Track changes in structure and review past node/edge narratives.
+*   **Analysis Code Generation:**
+    *   **Python:** Generate Jupyter notebooks using the Python Causal Estimator library.
+    *   **R:** Generate R scripts compatible with the `gfoRmula` package.
+*   **Privacy-Preserving Analysis (JupyterLite):**
+    *   Execute Python analysis code directly in the browser via JupyterLite.
+    *   **Steps:** Activate JupyterLite, navigate to your project folder, open the generated `.ipynb` file, and run the cells.
+    *   **Requirement:** Ensure the necessary data file is present in the JupyterLite project folder and variable names match those used in Data Layering.
+*   **Notebook Viewer:**
+    *   Select and view `.ipynb` files from your project storage.
+    *   Examine code cells and outputs from executed notebooks.
+*   **Challenge Mode Features:** (If applicable)
+    *   Specific features for challenge scenarios, potentially including predefined treatment selections, bootstrap estimation settings, specialized visualizations (treatment effects, subgroup analysis), and leaderboard integration. Check project specifics for availability.

@@ -1,0 +1,548 @@
+{
+  "nodes": [
+    {
+      "id": "2025-07-25T11:25:52.524Z",
+      "position": {
+        "x": 192.35221287069686,
+        "y": 184.79282389900342
+      },
+      "data": {
+        "openModal": false,
+        "label": "BMI",
+        "featureSource": {
+          "sdy1662.csv": {
+            "featureID": [
+              "BMI"
+            ],
+            "featureCategory": "Continuous"
+          }
+        }
+      },
+      "type": "adjusted",
+      "xPos": -200,
+      "yPos": 150,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 192.35221287069686,
+        "y": 184.79282389900342
+      },
+      "dragging": false
+    },
+    {
+      "id": "2025-07-25T11:25:52.943Z",
+      "position": {
+        "x": 194.62715424850913,
+        "y": 101.66801073268141
+      },
+      "data": {
+        "openModal": false,
+        "label": "Smoking",
+        "featureSource": {
+          "sdy1662.csv": {
+            "featureID": [
+              "SMOKING_STATUS"
+            ],
+            "featureCategory": "Binary"
+          }
+        }
+      },
+      "type": "adjusted",
+      "xPos": -200,
+      "yPos": 150,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 194.62715424850913,
+        "y": 101.66801073268141
+      },
+      "dragging": false
+    },
+    {
+      "id": "2025-07-25T11:25:53.319Z",
+      "position": {
+        "x": 197.49222654973994,
+        "y": -150.87103917303392
+      },
+      "data": {
+        "openModal": false,
+        "label": "Diabetes"
+      },
+      "type": "unadjusted",
+      "xPos": -200,
+      "yPos": 150,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 197.49222654973994,
+        "y": -150.87103917303392
+      },
+      "dragging": false
+    },
+    {
+      "id": "2025-07-25T11:25:53.693Z",
+      "position": {
+        "x": 196.26917354497147,
+        "y": 19.133328489777952
+      },
+      "data": {
+        "openModal": false,
+        "label": "Asthma"
+      },
+      "type": "unadjusted",
+      "xPos": -200,
+      "yPos": 150,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 196.26917354497147,
+        "y": 19.133328489777952
+      },
+      "dragging": false
+    },
+    {
+      "id": "2025-07-25T11:25:54.056Z",
+      "position": {
+        "x": 196.26917354497152,
+        "y": -66.4803818440122
+      },
+      "data": {
+        "openModal": false,
+        "label": "COPD"
+      },
+      "type": "unadjusted",
+      "xPos": -200,
+      "yPos": 150,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 196.26917354497152,
+        "y": -66.4803818440122
+      },
+      "dragging": false
+    },
+    {
+      "id": "2025-07-25T11:25:54.579Z",
+      "position": {
+        "x": 400.5190253412993,
+        "y": -1.658572591285406
+      },
+      "data": {
+        "openModal": false,
+        "label": "SATO2"
+      },
+      "type": "unadjusted",
+      "xPos": -200,
+      "yPos": 150,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 400.5190253412993,
+        "y": -1.658572591285406
+      },
+      "dragging": false
+    },
+    {
+      "id": "2025-07-25T11:25:54.877Z",
+      "position": {
+        "x": 394.40376031745734,
+        "y": -126.40997907766533
+      },
+      "data": {
+        "openModal": false,
+        "label": "CKD"
+      },
+      "type": "unadjusted",
+      "xPos": -200,
+      "yPos": 150,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 394.40376031745734,
+        "y": -126.40997907766533
+      },
+      "dragging": false
+    },
+    {
+      "id": "2025-07-25T11:25:55.179Z",
+      "position": {
+        "x": 513.0399017799949,
+        "y": 123.09283389509451
+      },
+      "data": {
+        "openModal": false,
+        "label": "Steroid Administration",
+        "featureSource": {
+          "sdy1662.csv": {
+            "featureID": [
+              "STEROIDS"
+            ],
+            "featureCategory": "Binary"
+          }
+        }
+      },
+      "type": "action",
+      "xPos": -200,
+      "yPos": 150,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 513.0399017799949,
+        "y": 123.09283389509451
+      },
+      "dragging": false
+    },
+    {
+      "id": "2025-07-25T11:25:55.433Z",
+      "position": {
+        "x": 658.5832093474382,
+        "y": 115.75451586648393
+      },
+      "data": {
+        "openModal": false,
+        "label": "28 Day Survival",
+        "featureSource": {
+          "sdy1662.csv": {
+            "featureID": [
+              "DEATH"
+            ],
+            "featureCategory": "Binary"
+          }
+        }
+      },
+      "type": "outcome",
+      "xPos": -200,
+      "yPos": 150,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 658.5832093474382,
+        "y": 115.75451586648393
+      },
+      "dragging": false
+    },
+    {
+      "id": "2025-07-25T11:27:56.790Z",
+      "position": {
+        "x": 194.25097911474631,
+        "y": 285.1687526058773
+      },
+      "data": {
+        "openModal": false,
+        "label": "Age",
+        "featureSource": {
+          "sdy1662.csv": {
+            "featureID": [
+              "AGE"
+            ],
+            "featureCategory": "Continuous"
+          }
+        }
+      },
+      "type": "adjusted",
+      "xPos": -200,
+      "yPos": 150,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 194.25097911474631,
+        "y": 285.1687526058773
+      },
+      "dragging": false
+    },
+    {
+      "id": "2025-07-25T11:28:05.701Z",
+      "position": {
+        "x": 190.71019357423444,
+        "y": 370.1495408583174
+      },
+      "data": {
+        "openModal": false,
+        "label": "Blood Pressure",
+        "featureSource": {
+          "sdy1662.csv": {
+            "featureID": [
+              "SYSTOL_BP_MAX"
+            ],
+            "featureCategory": "Continuous"
+          }
+        }
+      },
+      "type": "adjusted",
+      "xPos": -200,
+      "yPos": 150,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 190.71019357423444,
+        "y": 370.1495408583174
+      },
+      "dragging": false
+    },
+    {
+      "id": "2025-07-25T11:28:20.849Z",
+      "position": {
+        "x": 191.38590681351548,
+        "y": 450.8282480151029
+      },
+      "data": {
+        "openModal": false,
+        "label": "Resp Rate",
+        "featureSource": {
+          "sdy1662.csv": {
+            "featureID": [
+              "RESP_RATE_MAX"
+            ],
+            "featureCategory": "Continuous"
+          }
+        }
+      },
+      "type": "adjusted",
+      "xPos": -200,
+      "yPos": 150,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 191.38590681351548,
+        "y": 450.8282480151029
+      },
+      "dragging": false
+    },
+    {
+      "id": "2025-07-25T11:28:33.270Z",
+      "position": {
+        "x": 369.94270022208866,
+        "y": 349.3576397772542
+      },
+      "data": {
+        "openModal": false,
+        "label": "Remdesivir Antiviral Administration"
+      },
+      "type": "unadjusted",
+      "xPos": -200,
+      "yPos": 150,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 369.94270022208866,
+        "y": 349.3576397772542
+      },
+      "dragging": false
+    }
+  ],
+  "edges": [
+    {
+      "id": "2025-07-25T11:25:55.179Z->2025-07-25T11:25:55.433Z",
+      "targetHandle": "left",
+      "style": {
+        "strokeWidth": 0.75
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#00dfa7"
+      },
+      "interactionWidth": 20,
+      "updatable": true,
+      "source": "2025-07-25T11:25:55.179Z",
+      "sourceHandle": "right",
+      "target": "2025-07-25T11:25:55.433Z",
+      "type": "causal"
+    },
+    {
+      "id": "2025-07-25T11:25:54.579Z->2025-07-25T11:25:55.179Z",
+      "targetHandle": "left",
+      "style": {
+        "strokeWidth": 0.75
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      },
+      "interactionWidth": 20,
+      "updatable": true,
+      "source": "2025-07-25T11:25:54.579Z",
+      "sourceHandle": "right",
+      "target": "2025-07-25T11:25:55.179Z",
+      "type": "default"
+    },
+    {
+      "id": "2025-07-25T11:25:54.877Z->2025-07-25T11:25:55.433Z",
+      "targetHandle": "left",
+      "style": {
+        "strokeWidth": 0.75
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      },
+      "interactionWidth": 20,
+      "updatable": true,
+      "source": "2025-07-25T11:25:54.877Z",
+      "sourceHandle": "right",
+      "target": "2025-07-25T11:25:55.433Z",
+      "type": "default"
+    },
+    {
+      "id": "2025-07-25T11:25:53.319Z->2025-07-25T11:25:55.433Z",
+      "targetHandle": "left",
+      "style": {
+        "strokeWidth": 0.75
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      },
+      "interactionWidth": 20,
+      "updatable": true,
+      "source": "2025-07-25T11:25:53.319Z",
+      "sourceHandle": "right",
+      "target": "2025-07-25T11:25:55.433Z",
+      "type": "default"
+    },
+    {
+      "id": "2025-07-25T11:28:33.270Z->2025-07-25T11:25:55.433Z",
+      "targetHandle": "left",
+      "style": {
+        "strokeWidth": 0.75
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      },
+      "interactionWidth": 20,
+      "updatable": true,
+      "source": "2025-07-25T11:28:33.270Z",
+      "sourceHandle": "right",
+      "target": "2025-07-25T11:25:55.433Z",
+      "type": "default"
+    },
+    {
+      "id": "2025-07-25T11:28:20.849Z->2025-07-25T11:25:55.433Z",
+      "targetHandle": "left",
+      "style": {
+        "strokeWidth": 0.75
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      },
+      "interactionWidth": 20,
+      "updatable": true,
+      "source": "2025-07-25T11:28:20.849Z",
+      "sourceHandle": "right",
+      "target": "2025-07-25T11:25:55.433Z",
+      "type": "default"
+    },
+    {
+      "id": "2025-07-25T11:28:05.701Z->2025-07-25T11:25:55.179Z",
+      "targetHandle": "left",
+      "style": {
+        "strokeWidth": 0.75
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      },
+      "interactionWidth": 20,
+      "updatable": true,
+      "source": "2025-07-25T11:28:05.701Z",
+      "sourceHandle": "right",
+      "target": "2025-07-25T11:25:55.179Z",
+      "type": "default"
+    },
+    {
+      "id": "2025-07-25T11:27:56.790Z->2025-07-25T11:25:55.179Z",
+      "targetHandle": "left",
+      "style": {
+        "strokeWidth": 0.75
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      },
+      "interactionWidth": 20,
+      "updatable": true,
+      "source": "2025-07-25T11:27:56.790Z",
+      "sourceHandle": "right",
+      "target": "2025-07-25T11:25:55.179Z",
+      "type": "default"
+    },
+    {
+      "id": "2025-07-25T11:25:52.524Z->2025-07-25T11:25:55.433Z",
+      "targetHandle": "left",
+      "style": {
+        "strokeWidth": 0.75
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      },
+      "interactionWidth": 20,
+      "updatable": true,
+      "source": "2025-07-25T11:25:52.524Z",
+      "sourceHandle": "right",
+      "target": "2025-07-25T11:25:55.433Z",
+      "type": "default"
+    },
+    {
+      "id": "2025-07-25T11:25:52.943Z->2025-07-25T11:25:54.579Z",
+      "targetHandle": "left",
+      "style": {
+        "strokeWidth": 0.75
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      },
+      "interactionWidth": 20,
+      "updatable": true,
+      "source": "2025-07-25T11:25:52.943Z",
+      "sourceHandle": "right",
+      "target": "2025-07-25T11:25:54.579Z",
+      "type": "default"
+    },
+    {
+      "id": "2025-07-25T11:25:52.943Z->2025-07-25T11:25:55.433Z",
+      "targetHandle": "left",
+      "style": {
+        "strokeWidth": 0.75
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      },
+      "interactionWidth": 20,
+      "updatable": true,
+      "source": "2025-07-25T11:25:52.943Z",
+      "sourceHandle": "right",
+      "target": "2025-07-25T11:25:55.433Z",
+      "type": "default"
+    }
+  ]
+}

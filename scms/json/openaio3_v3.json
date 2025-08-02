@@ -1,0 +1,953 @@
+{
+  "nodes": [
+    {
+      "id": "Steroids",
+      "position": {
+        "x": 400,
+        "y": 465
+      },
+      "data": {
+        "label": "Steroids",
+        "narrative": "Indicator that the patient received systemic corticosteroids (e.g. dexamethasone, hydrocortisone, methylprednisolone, prednisolone, prednisone) during the index hospitalization.",
+        "type": "action",
+        "featureSource": {
+          "sdy1662.csv": {
+            "featureID": [
+              "STEROIDS"
+            ],
+            "featureCategory": "Binary"
+          }
+        }
+      },
+      "type": "action",
+      "xPos": 400,
+      "yPos": 465,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40
+    },
+    {
+      "id": "Survival28Days",
+      "position": {
+        "x": 580,
+        "y": 444.375
+      },
+      "data": {
+        "label": "28-day Survival",
+        "narrative": "Patient survival status 28 days after hospital admission (1 = alive, 0 = died).  Proxied by the DEATH flag truncated at 28&nbsp;days.",
+        "type": "outcome",
+        "featureSource": {
+          "sdy1662.csv": {
+            "featureID": [
+              "DEATH"
+            ],
+            "featureCategory": "Binary"
+          }
+        }
+      },
+      "type": "outcome",
+      "xPos": 580,
+      "yPos": 444.375,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40
+    },
+    {
+      "id": "Age",
+      "position": {
+        "x": 40,
+        "y": 885
+      },
+      "data": {
+        "label": "Age",
+        "narrative": "Age in years at admission, a strong prognostic factor that can also influence treatment decisions.",
+        "type": "adjusted",
+        "featureSource": {
+          "sdy1662.csv": {
+            "featureID": [
+              "AGE"
+            ],
+            "featureCategory": "Continuous"
+          }
+        }
+      },
+      "type": "adjusted",
+      "xPos": 40,
+      "yPos": 885,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40
+    },
+    {
+      "id": "Gender",
+      "position": {
+        "x": 40,
+        "y": 817.5
+      },
+      "data": {
+        "label": "Sex",
+        "narrative": "Patient biological sex (male / female).",
+        "type": "adjusted",
+        "featureSource": {
+          "sdy1662.csv": {
+            "featureID": [
+              "GENDER"
+            ],
+            "featureCategory": "Binary"
+          }
+        }
+      },
+      "type": "unadjusted",
+      "xPos": 40,
+      "yPos": 817.5,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40,
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "BaselineSeverity",
+      "position": {
+        "x": 220,
+        "y": 624.375
+      },
+      "data": {
+        "label": "Severity",
+        "narrative": "Clinical severity of illness on admission quantified by the numeric severity score (1–3) incorporating oxygen needs and organ dysfunction.",
+        "type": "adjusted",
+        "featureSource": {
+          "sdy1662.csv": {
+            "featureID": [
+              "SEVERITY_NUMERIC"
+            ],
+            "featureCategory": "Ordinal"
+          }
+        },
+        "openModal": false
+      },
+      "type": "adjusted",
+      "xPos": 220,
+      "yPos": 624.375,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40,
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "DIABETES",
+      "position": {
+        "x": 40,
+        "y": 682.5
+      },
+      "data": {
+        "label": "Diabetes",
+        "narrative": "Pre-existing diagnosis of diabetes mellitus.",
+        "type": "adjusted",
+        "featureSource": {
+          "sdy1662.csv": {
+            "featureID": [
+              "DIABETES"
+            ],
+            "featureCategory": "Binary"
+          }
+        },
+        "openModal": false
+      },
+      "type": "adjusted",
+      "xPos": 40,
+      "yPos": 682.5,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40,
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "CKD",
+      "position": {
+        "x": 40,
+        "y": 588.75
+      },
+      "data": {
+        "label": "CKD",
+        "narrative": "Chronic kidney disease prior to admission.",
+        "type": "adjusted",
+        "featureSource": {
+          "sdy1662.csv": {
+            "featureID": [
+              "CKD"
+            ],
+            "featureCategory": "Binary"
+          }
+        },
+        "openModal": false
+      },
+      "type": "adjusted",
+      "xPos": 40,
+      "yPos": 588.75,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40,
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "CHF",
+      "position": {
+        "x": 40,
+        "y": 521.25
+      },
+      "data": {
+        "label": "CHF",
+        "narrative": "Pre-existing congestive heart failure.",
+        "type": "adjusted",
+        "featureSource": {
+          "sdy1662.csv": {
+            "featureID": [
+              "CHF"
+            ],
+            "featureCategory": "Binary"
+          }
+        },
+        "openModal": false
+      },
+      "type": "adjusted",
+      "xPos": 40,
+      "yPos": 521.25,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40,
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "COPD",
+      "position": {
+        "x": 40,
+        "y": 452.7695058517555
+      },
+      "data": {
+        "label": "COPD",
+        "narrative": "Pre-existing chronic obstructive pulmonary disease.",
+        "type": "adjusted",
+        "featureSource": {
+          "sdy1662.csv": {
+            "featureID": [
+              "COPD"
+            ],
+            "featureCategory": "Binary"
+          }
+        },
+        "openModal": false
+      },
+      "type": "adjusted",
+      "xPos": 40,
+      "yPos": 453.75,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40,
+      "selected": false,
+      "dragging": false,
+      "positionAbsolute": {
+        "x": 40,
+        "y": 452.7695058517555
+      }
+    },
+    {
+      "id": "CORONARY_ARTERY_DISEASE",
+      "position": {
+        "x": 40,
+        "y": 382.5
+      },
+      "data": {
+        "label": "CAD",
+        "narrative": "History of coronary artery disease.",
+        "type": "adjusted",
+        "featureSource": {
+          "sdy1662.csv": {
+            "featureID": [
+              "CORONARY_ARTERY_DISEASE"
+            ],
+            "featureCategory": "Binary"
+          }
+        }
+      },
+      "type": "unadjusted",
+      "xPos": 40,
+      "yPos": 382.5,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40,
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "CANCER_FLAG",
+      "position": {
+        "x": 40,
+        "y": 315
+      },
+      "data": {
+        "label": "Cancer",
+        "narrative": "Active cancer diagnosis at baseline.",
+        "type": "adjusted",
+        "featureSource": {
+          "sdy1662.csv": {
+            "featureID": [
+              "CANCER_FLAG"
+            ],
+            "featureCategory": "Binary"
+          }
+        },
+        "openModal": false
+      },
+      "type": "adjusted",
+      "xPos": 40,
+      "yPos": 315,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40,
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "ANTICOAGULANTS",
+      "position": {
+        "x": 220,
+        "y": 82.5
+      },
+      "data": {
+        "label": "Anticoagulants",
+        "narrative": "In-hospital exposure to therapeutic or prophylactic anticoagulants.",
+        "type": "adjusted",
+        "featureSource": {
+          "sdy1662.csv": {
+            "featureID": [
+              "ANTICOAGULANTS"
+            ],
+            "featureCategory": "Binary"
+          }
+        },
+        "openModal": false
+      },
+      "type": "adjusted",
+      "xPos": 220,
+      "yPos": 82.5,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40,
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "ANTICYTOKINES",
+      "position": {
+        "x": 220,
+        "y": 150
+      },
+      "data": {
+        "label": "Anticytokines",
+        "narrative": "Receipt of cytokine-targeted therapies such as tocilizumab or anakinra.",
+        "type": "adjusted",
+        "featureSource": {
+          "sdy1662.csv": {
+            "featureID": [
+              "ANTICYTOKINES"
+            ],
+            "featureCategory": "Binary"
+          }
+        },
+        "openModal": false
+      },
+      "type": "adjusted",
+      "xPos": 220,
+      "yPos": 150,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40,
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "HYDROXYCHLOROQUINE",
+      "position": {
+        "x": 220,
+        "y": 217.5
+      },
+      "data": {
+        "label": "HCQ",
+        "narrative": "Receipt of hydroxychloroquine.",
+        "type": "adjusted",
+        "featureSource": {
+          "sdy1662.csv": {
+            "featureID": [
+              "HYDROXYCHLOROQUINE"
+            ],
+            "featureCategory": "Binary"
+          }
+        }
+      },
+      "type": "adjusted",
+      "xPos": 220,
+      "yPos": 217.5,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40
+    },
+    {
+      "id": "REMDESIVIR",
+      "position": {
+        "x": 220,
+        "y": 285
+      },
+      "data": {
+        "label": "Remdesivir",
+        "narrative": "Receipt of antiviral remdesivir.",
+        "type": "adjusted",
+        "featureSource": {
+          "sdy1662.csv": {
+            "featureID": [
+              "REMDESIVIR"
+            ],
+            "featureCategory": "Binary"
+          }
+        }
+      },
+      "type": "adjusted",
+      "xPos": 220,
+      "yPos": 285,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40
+    }
+  ],
+  "edges": [
+    {
+      "id": "Age->BaselineSeverity",
+      "source": "Age",
+      "target": "BaselineSeverity",
+      "targetHandle": "left",
+      "type": "default",
+      "updatable": true,
+      "data": {
+        "narrative": "Older patients typically present with more severe illness."
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      }
+    },
+    {
+      "id": "Age->Steroids",
+      "source": "Age",
+      "target": "Steroids",
+      "targetHandle": "left",
+      "type": "default",
+      "updatable": true,
+      "data": {
+        "narrative": "Clinicians may preferentially prescribe or withhold steroids based on patient age."
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      }
+    },
+    {
+      "id": "Age->Survival28Days",
+      "source": "Age",
+      "target": "Survival28Days",
+      "targetHandle": "left",
+      "type": "default",
+      "updatable": true,
+      "data": {
+        "narrative": "Age is a well-known independent predictor of mortality."
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      }
+    },
+    {
+      "id": "Gender->BaselineSeverity",
+      "source": "Gender",
+      "target": "BaselineSeverity",
+      "targetHandle": "left",
+      "type": "biased",
+      "updatable": true,
+      "data": {
+        "narrative": "Male sex has been associated with more severe COVID-19."
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ff771cff"
+      }
+    },
+    {
+      "id": "Gender->Steroids",
+      "source": "Gender",
+      "target": "Steroids",
+      "targetHandle": "left",
+      "type": "biased",
+      "updatable": true,
+      "data": {
+        "narrative": "Treatment practices may vary by sex."
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ff771cff"
+      }
+    },
+    {
+      "id": "Gender->Survival28Days",
+      "source": "Gender",
+      "target": "Survival28Days",
+      "targetHandle": "left",
+      "type": "biased",
+      "updatable": true,
+      "data": {
+        "narrative": "Sex differences in COVID-19 outcomes are documented."
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ff771cff"
+      }
+    },
+    {
+      "id": "BaselineSeverity->Steroids",
+      "source": "BaselineSeverity",
+      "target": "Steroids",
+      "targetHandle": "left",
+      "type": "default",
+      "updatable": true,
+      "data": {
+        "narrative": "Severity strongly drives clinical decision to initiate steroids."
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      }
+    },
+    {
+      "id": "BaselineSeverity->Survival28Days",
+      "source": "BaselineSeverity",
+      "target": "Survival28Days",
+      "targetHandle": "left",
+      "type": "default",
+      "updatable": true,
+      "data": {
+        "narrative": "Baseline severity is prognostic for mortality."
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      }
+    },
+    {
+      "id": "Steroids->Survival28Days",
+      "source": "Steroids",
+      "target": "Survival28Days",
+      "targetHandle": "left",
+      "type": "causal",
+      "updatable": true,
+      "data": {
+        "narrative": "Primary causal effect of interest: systemic steroids may improve survival by modulating inflammation but may also cause harms."
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#00dfa7"
+      }
+    },
+    {
+      "id": "DIABETES->BaselineSeverity",
+      "source": "DIABETES",
+      "target": "BaselineSeverity",
+      "targetHandle": "left",
+      "type": "default",
+      "updatable": true,
+      "data": {
+        "narrative": "Diabetes contributes to baseline severity."
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      }
+    },
+    {
+      "id": "DIABETES->Steroids",
+      "source": "DIABETES",
+      "target": "Steroids",
+      "targetHandle": "left",
+      "type": "default",
+      "updatable": true,
+      "data": {
+        "narrative": "Diabetes may influence clinicians when prescribing steroids due to hyperglycemia risk."
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      }
+    },
+    {
+      "id": "DIABETES->Survival28Days",
+      "source": "DIABETES",
+      "target": "Survival28Days",
+      "targetHandle": "left",
+      "type": "default",
+      "updatable": true,
+      "data": {
+        "narrative": "Diabetes is associated with worse COVID-19 survival."
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      }
+    },
+    {
+      "id": "CKD->BaselineSeverity",
+      "source": "CKD",
+      "target": "BaselineSeverity",
+      "targetHandle": "left",
+      "type": "default",
+      "updatable": true,
+      "data": {
+        "narrative": "Chronic kidney disease increases illness severity."
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      }
+    },
+    {
+      "id": "CKD->Steroids",
+      "source": "CKD",
+      "target": "Steroids",
+      "targetHandle": "left",
+      "type": "default",
+      "updatable": true,
+      "data": {
+        "narrative": "CKD may alter steroid prescribing."
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      }
+    },
+    {
+      "id": "CKD->Survival28Days",
+      "source": "CKD",
+      "target": "Survival28Days",
+      "targetHandle": "left",
+      "type": "default",
+      "updatable": true,
+      "data": {
+        "narrative": "CKD worsens survival."
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      }
+    },
+    {
+      "id": "CHF->BaselineSeverity",
+      "source": "CHF",
+      "target": "BaselineSeverity",
+      "targetHandle": "left",
+      "type": "default",
+      "updatable": true,
+      "data": {
+        "narrative": "Heart failure contributes to baseline severity."
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      }
+    },
+    {
+      "id": "CHF->Steroids",
+      "source": "CHF",
+      "target": "Steroids",
+      "targetHandle": "left",
+      "type": "default",
+      "updatable": true,
+      "data": {
+        "narrative": "CHF status may influence steroid use."
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      }
+    },
+    {
+      "id": "CHF->Survival28Days",
+      "source": "CHF",
+      "target": "Survival28Days",
+      "targetHandle": "left",
+      "type": "default",
+      "updatable": true,
+      "data": {
+        "narrative": "CHF is independently associated with mortality."
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      }
+    },
+    {
+      "id": "COPD->BaselineSeverity",
+      "source": "COPD",
+      "target": "BaselineSeverity",
+      "targetHandle": "left",
+      "type": "default",
+      "updatable": true,
+      "data": {
+        "narrative": "COPD affects respiratory severity."
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      }
+    },
+    {
+      "id": "COPD->Steroids",
+      "source": "COPD",
+      "target": "Steroids",
+      "targetHandle": "left",
+      "type": "default",
+      "updatable": true,
+      "data": {
+        "narrative": "COPD patients may receive steroids differently."
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      }
+    },
+    {
+      "id": "COPD->Survival28Days",
+      "source": "COPD",
+      "target": "Survival28Days",
+      "targetHandle": "left",
+      "type": "default",
+      "updatable": true,
+      "data": {
+        "narrative": "COPD worsens outcomes."
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      }
+    },
+    {
+      "id": "CORONARY_ARTERY_DISEASE->BaselineSeverity",
+      "source": "CORONARY_ARTERY_DISEASE",
+      "target": "BaselineSeverity",
+      "targetHandle": "left",
+      "type": "biased",
+      "updatable": true,
+      "data": {
+        "narrative": "Coronary artery disease increases severity."
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ff771cff"
+      }
+    },
+    {
+      "id": "CORONARY_ARTERY_DISEASE->Steroids",
+      "source": "CORONARY_ARTERY_DISEASE",
+      "target": "Steroids",
+      "targetHandle": "left",
+      "type": "biased",
+      "updatable": true,
+      "data": {
+        "narrative": "Coronary artery disease may impact steroid decision-making."
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ff771cff"
+      }
+    },
+    {
+      "id": "CORONARY_ARTERY_DISEASE->Survival28Days",
+      "source": "CORONARY_ARTERY_DISEASE",
+      "target": "Survival28Days",
+      "targetHandle": "left",
+      "type": "biased",
+      "updatable": true,
+      "data": {
+        "narrative": "Coronary artery disease is a mortality risk factor."
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ff771cff"
+      }
+    },
+    {
+      "id": "CANCER_FLAG->BaselineSeverity",
+      "source": "CANCER_FLAG",
+      "target": "BaselineSeverity",
+      "targetHandle": "left",
+      "type": "default",
+      "updatable": true,
+      "data": {
+        "narrative": "Active cancer increases illness severity."
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      }
+    },
+    {
+      "id": "CANCER_FLAG->Steroids",
+      "source": "CANCER_FLAG",
+      "target": "Steroids",
+      "targetHandle": "left",
+      "type": "default",
+      "updatable": true,
+      "data": {
+        "narrative": "Oncologic status may influence steroid use decisions."
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      }
+    },
+    {
+      "id": "CANCER_FLAG->Survival28Days",
+      "source": "CANCER_FLAG",
+      "target": "Survival28Days",
+      "targetHandle": "left",
+      "type": "default",
+      "updatable": true,
+      "data": {
+        "narrative": "Cancer is associated with mortality risk."
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      }
+    },
+    {
+      "id": "ANTICOAGULANTS->Steroids",
+      "source": "ANTICOAGULANTS",
+      "target": "Steroids",
+      "targetHandle": "left",
+      "type": "default",
+      "updatable": true,
+      "data": {
+        "narrative": "Steroid use is correlated with anticoagulation protocols."
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      }
+    },
+    {
+      "id": "ANTICOAGULANTS->Survival28Days",
+      "source": "ANTICOAGULANTS",
+      "target": "Survival28Days",
+      "targetHandle": "left",
+      "type": "default",
+      "updatable": true,
+      "data": {
+        "narrative": "Anticoagulation may improve or worsen survival."
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      }
+    },
+    {
+      "id": "ANTICYTOKINES->Steroids",
+      "source": "ANTICYTOKINES",
+      "target": "Steroids",
+      "targetHandle": "left",
+      "type": "default",
+      "updatable": true,
+      "data": {
+        "narrative": "Steroid and cytokine-targeted therapies are often co-administered."
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      }
+    },
+    {
+      "id": "ANTICYTOKINES->Survival28Days",
+      "source": "ANTICYTOKINES",
+      "target": "Survival28Days",
+      "targetHandle": "left",
+      "type": "default",
+      "updatable": true,
+      "data": {
+        "narrative": "Anticytokine therapy may affect survival."
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      }
+    },
+    {
+      "id": "HYDROXYCHLOROQUINE->Steroids",
+      "source": "HYDROXYCHLOROQUINE",
+      "target": "Steroids",
+      "targetHandle": "left",
+      "type": "default",
+      "updatable": true,
+      "data": {
+        "narrative": "Hydroxychloroquine use is associated with treatment protocols including steroids."
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      }
+    },
+    {
+      "id": "HYDROXYCHLOROQUINE->Survival28Days",
+      "source": "HYDROXYCHLOROQUINE",
+      "target": "Survival28Days",
+      "targetHandle": "left",
+      "type": "default",
+      "updatable": true,
+      "data": {
+        "narrative": "Hydroxychloroquine may influence survival."
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      }
+    },
+    {
+      "id": "REMDESIVIR->Steroids",
+      "source": "REMDESIVIR",
+      "target": "Steroids",
+      "targetHandle": "left",
+      "type": "default",
+      "updatable": true,
+      "data": {
+        "narrative": "Steroids are often given alongside remdesivir."
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      }
+    },
+    {
+      "id": "REMDESIVIR->Survival28Days",
+      "source": "REMDESIVIR",
+      "target": "Survival28Days",
+      "targetHandle": "left",
+      "type": "default",
+      "updatable": true,
+      "data": {
+        "narrative": "Remdesivir can impact survival."
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      }
+    }
+  ]
+}

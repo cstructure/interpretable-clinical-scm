@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns
+         http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <!-- Key definitions -->
+  <key id="narrative" for="node" attr.name="narrative" attr.type="string"/>
+  <key id="narrative" for="edge" attr.name="narrative" attr.type="string"/>
+  <key id="label" for="node" attr.name="label" attr.type="string"/>
+  <key id="type" for="node" attr.name="type" attr.type="string"/>
+  <key id="featureSource" for="node" attr.name="featureSource" attr.type="string"/>
+  
+  <graph id="COVID19SteroidsCausalModel" edgedefault="directed">
+    
+    <!-- Demographics and baseline characteristics -->
+    <node id="Age">
+      <data key="narrative">Patient age at admission. Older age is associated with worse COVID-19 outcomes and may influence treatment decisions.</data>
+      <data key="label">Age</data>
+      <data key="type">adjusted</data>
+      <data key="featureSource">{"sdy1662.csv":{"featureID":["AGE"],"featureCategory":"Continuous"}}</data>
+    </node>
+    
+    <node id="Sex">
+      <data key="narrative">Biological sex of the patient. Sex differences may affect COVID-19 severity and treatment response.</data>
+      <data key="label">Sex</data>
+      <data key="type">adjusted</data>
+      <data key="featureSource">{"sdy1662.csv":{"featureID":["SEX"],"featureCategory":"Binary"}}</data>
+    </node>
+    
+    <node id="Race">
+      <data key="narrative">Patient's race/ethnicity. Important for understanding health disparities and potential differences in treatment access or response.</data>
+      <data key="label">Race/Ethnicity</data>
+      <data key="type">adjusted</data>
+      <data key="featureSource">{"sdy1662.csv":{"featureID":["RACE"],"featureCategory":"Categorical"}}</data>
+    </node>
+    
+    <node id="BMI">
+      <data key="narrative">Body Mass Index. Obesity is a known risk factor for severe COVID-19 and may influence treatment decisions.</data>
+      <data key="label">BMI</data>
+      <data key="type">adjusted</data>
+      <data key="featureSource">{"sdy1662.csv":{"featureID":["BMI"],"featureCategory":"Continuous"}}</data>
+    </node>
+    
+    <!-- Comorbidities -->
+    <node id="Diabetes">
+      <data key="narrative">Presence of diabetes mellitus. Major risk factor for severe COVID-19 and influences steroid treatment considerations.</data>
+      <data key="label">Diabetes</data>
+      <data key="type">adjusted</data>
+      <data key="featureSource">{"sdy1662.csv":{"featureID":["DIABETES"],"featureCategory":"Binary"}}</data>
+    </node>
+    
+    <node id="HeartFailure">
+      <data key="narrative">Congestive heart failure. Major cardiovascular comorbidity affecting COVID-19 outcomes.</data>
+      <data key="label">Heart Failure</data>
+      <data key="type">adjusted</data>
+      <data key="featureSource">{"sdy1662.csv":{"featureID":["CHF"],"featureCategory":"Binary"}}</data>
+    </node>
+    
+    <node id="CoronaryArteryDisease">
+      <data key="narrative">Presence of coronary artery disease. Cardiovascular risk factor for COVID-19 mortality.</data>
+      <data key="label">Coronary Artery Disease</data>
+      <data key="type">adjusted</data>
+      <data key="featureSource">{"sdy1662.csv":{"featureID":["CORONARY_ARTERY_DISEASE"],"featureCategory":"Binary"}}</data>
+    </node>
+    
+    <node id="ChronicLungDisease">
+      <data key="narrative">Chronic pulmonary diseases including COPD and asthma. Affects respiratory function and COVID-19 severity.</data>
+      <data key="label">Chronic Lung Disease</data>
+      <data key="type">adjusted</data>
+      <data key="featureSource">{"sdy1662.csv":{"featureID":["COPD","ASTHMA"],"featureCategory":"Binary"}}</data>
+    </node>
+    
+    <node id="ChronicKidneyDisease">
+      <data key="narrative">Chronic kidney disease. Affects drug metabolism and is associated with worse COVID-19 outcomes.</data>
+      <data key="label">Chronic Kidney Disease</data>
+      <data key="type">adjusted</data>
+      <data key="featureSource">{"sdy1662.csv":{"featureID":["CKD"],"featureCategory":"Binary"}}</data>
+    </node>
+    
+    <node id="Cancer">
+      <data key="narrative">Cancer diagnosis. May indicate immunocompromised status affecting treatment response.</data>
+      <data key="label">Cancer</data>
+      <data key="type">adjusted</data>
+      <data key="featureSource">{"sdy1662.csv":{"featureID":["CANCER_FLAG"],"featureCategory":"Binary"}}</data>
+    </node>
+    
+    <!-- COVID-19 severity indicators -->
+    <node id="OxygenSaturation">
+      <data key="narrative">Minimum oxygen saturation level. Key indicator of respiratory function and COVID-19 severity.</data>
+      <data key="label">Oxygen Saturation</data>
+      <data key="type">adjusted</data>
+      <data key="featureSource">{"sdy1662.csv":{"featureID":["O2SAT_MIN"],"featureCategory":"Continuous"}}</data>
+    </node>
+    
+    <node id="RespiratoryRate">
+      <data key="narrative">Maximum respiratory rate. Elevated rates indicate respiratory distress and disease severity.</data>
+      <data key="label">Respiratory Rate</data>
+      <data key="type">adjusted</data>
+      <data key="featureSource">{"sdy1662.csv":{"featureID":["RESP_RATE_MAX"],"featureCategory":"Continuous"}}</data>
+    </node>
+    
+    <node id="InflammatoryMarkers">
+      <data key="narrative">Inflammatory markers including CRP and ferritin indicating systemic inflammation severity.</data>
+      <data key="label">Inflammatory Markers</data>
+      <data key="type">adjusted</data>
+      <data key="featureSource">{"sdy1662.csv":{"featureID":["CRP_LOG2","FERRITIN_LOG2"],"featureCategory":"Continuous"}}</data>
+    </node>
+    
+    <node id="ARDS">
+      <data key="narrative">Acute respiratory distress syndrome. Severe complication of COVID-19 requiring intensive support.</data>
+      <data key="label">ARDS</data>
+      <data key="type">unadjusted</data>
+      <data key="featureSource">{"sdy1662.csv":{"featureID":["ARDS"],"featureCategory":"Binary"}}</data>
+    </node>
+    
+    <!-- Treatment (Action) -->
+    <node id="Steroids">
+      <data key="narrative">Administration of steroids (glucocorticoids) during hospitalization. Primary intervention of interest.</data>
+      <data key="label">Steroids</data>
+      <data key="type">action</data>
+      <data key="featureSource">{"sdy1662.csv":{"featureID":["STEROIDS"],"featureCategory":"Binary"}}</data>
+    </node>
+    
+    <!-- Co-interventions -->
+    <node id="Hydroxychloroquine">
+      <data key="narrative">Administration of hydroxychloroquine. Co-intervention that may affect outcomes.</data>
+      <data key="label">Hydroxychloroquine</data>
+      <data key="type">adjusted</data>
+      <data key="featureSource">{"sdy1662.csv":{"featureID":["HYDROXYCHLOROQUINE"],"featureCategory":"Binary"}}</data>
+    </node>
+    
+    <node id="Remdesivir">
+      <data key="narrative">Administration of remdesivir. Antiviral treatment that may modify outcomes.</data>
+      <data key="label">Remdesivir</data>
+      <data key="type">adjusted</data>
+      <data key="featureSource">{"sdy1662.csv":{"featureID":["REMDESIVIR"],"featureCategory":"Binary"}}</data>
+    </node>
+    
+    <node id="Anticoagulants">
+      <data key="narrative">Use of anticoagulants. May prevent thrombotic complications in COVID-19.</data>
+      <data key="label">Anticoagulants</data>
+      <data key="type">unadjusted</data>
+      <data key="featureSource">{"sdy1662.csv":{"featureID":["ANTICOAGULANTS"],"featureCategory":"Binary"}}</data>
+    </node>
+    
+    <!-- Outcome -->
+    <node id="Mortality">
+      <data key="narrative">All-cause mortality during hospitalization or follow-up. Primary outcome of interest.</data>
+      <data key="label">Mortality</data>
+      <data key="type">outcome</data>
+      <data key="featureSource">{"sdy1662.csv":{"featureID":["DEATH"],"featureCategory":"Binary"}}</data>
+    </node>
+    
+    <!-- Edges defining causal relationships -->
+    <!-- Demographics to severity and treatment -->
+    <edge id="e1" source="Age" target="OxygenSaturation">
+      <data key="narrative">Older age is associated with worse respiratory function due to immunosenescence and reduced physiologic reserve.</data>
+    </edge>
+    
+    <edge id="e2" source="Age" target="Steroids">
+      <data key="narrative">Age may influence treatment decisions, with clinicians considering age-related risks and benefits.</data>
+    </edge>
+    
+    <edge id="e3" source="Age" target="Mortality">
+      <data key="narrative">Advanced age directly increases mortality risk through reduced physiologic reserve and higher comorbidity burden.</data>
+    </edge>
+    
+    <edge id="e4" source="Sex" target="InflammatoryMarkers">
+      <data key="narrative">Male sex is associated with higher inflammatory response in COVID-19.</data>
+    </edge>
+    
+    <edge id="e5" source="Race" target="Steroids">
+      <data key="narrative">Healthcare disparities may influence treatment access and decisions across racial groups.</data>
+    </edge>
+    
+    <edge id="e6" source="BMI" target="OxygenSaturation">
+      <data key="narrative">Obesity mechanically compromises respiratory function and worsens hypoxemia.</data>
+    </edge>
+    
+    <!-- Comorbidities to severity and outcomes -->
+    <edge id="e7" source="Diabetes" target="InflammatoryMarkers">
+      <data key="narrative">Diabetes promotes inflammatory response and immune dysregulation in COVID-19.</data>
+    </edge>
+    
+    <edge id="e8" source="Diabetes" target="Mortality">
+      <data key="narrative">Diabetes independently increases mortality risk through metabolic derangements and vascular complications.</data>
+    </edge>
+    
+    <edge id="e9" source="HeartFailure" target="Mortality">
+      <data key="narrative">Heart failure directly increases mortality risk through reduced cardiac reserve.</data>
+    </edge>
+    
+    <edge id="e10" source="ChronicLungDisease" target="OxygenSaturation">
+      <data key="narrative">Pre-existing lung disease reduces baseline respiratory function, worsening hypoxemia.</data>
+    </edge>
+    
+    <edge id="e11" source="ChronicKidneyDisease" target="Mortality">
+      <data key="narrative">CKD increases mortality through metabolic complications and reduced drug clearance.</data>
+    </edge>
+    
+    <!-- Severity indicators to treatment and outcome -->
+    <edge id="e12" source="OxygenSaturation" target="Steroids">
+      <data key="narrative">Hypoxemia is a key criterion for steroid initiation per COVID-19 treatment guidelines.</data>
+    </edge>
+    
+    <edge id="e13" source="OxygenSaturation" target="Mortality">
+      <data key="narrative">Severe hypoxemia directly increases mortality risk through tissue hypoxia.</data>
+    </edge>
+    
+    <edge id="e14" source="RespiratoryRate" target="Steroids">
+      <data key="narrative">Tachypnea indicates respiratory distress prompting steroid consideration.</data>
+    </edge>
+    
+    <edge id="e15" source="InflammatoryMarkers" target="Steroids">
+      <data key="narrative">Elevated inflammatory markers may prompt anti-inflammatory steroid therapy.</data>
+    </edge>
+    
+    <edge id="e16" source="InflammatoryMarkers" target="Mortality">
+      <data key="narrative">Hyperinflammation drives organ dysfunction and mortality in severe COVID-19.</data>
+    </edge>
+    
+    <!-- Treatment to outcome -->
+    <edge id="e17" source="Steroids" target="Mortality">
+      <data key="narrative">Steroids may reduce mortality by modulating hyperinflammation in severe COVID-19.</data>
+    </edge>
+    
+    <edge id="e18" source="Hydroxychloroquine" target="Mortality">
+      <data key="narrative">Hydroxychloroquine treatment may affect mortality, though evidence suggests limited benefit.</data>
+    </edge>
+    
+    <edge id="e19" source="Remdesivir" target="Mortality">
+      <data key="narrative">Remdesivir may reduce mortality through antiviral effects, particularly early in disease course.</data>
+    </edge>
+    
+    <!-- Mediating pathways -->
+    <edge id="e20" source="Steroids" target="ARDS">
+      <data key="narrative">Steroids may prevent or ameliorate ARDS by reducing inflammatory lung injury.</data>
+    </edge>
+    
+    <edge id="e21" source="ARDS" target="Mortality">
+      <data key="narrative">ARDS significantly increases mortality risk through severe respiratory failure.</data>
+    </edge>
+    
+    <edge id="e22" source="Anticoagulants" target="Mortality">
+      <data key="narrative">Anticoagulation may reduce mortality by preventing thrombotic complications.</data>
+    </edge>
+    
+  </graph>
+</graphml>

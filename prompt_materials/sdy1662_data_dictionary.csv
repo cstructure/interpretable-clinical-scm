@@ -1,0 +1,87 @@
+variables,unit,description
+ACUTE_KIDNEY_INJURY,undescribed,boolean for acute kidney injury
+ACUTE_MI,undescribed,boolean for acute myocarditis
+ACUTE_VENOUS_THROMBOEMBOLISM,undescribed,boolean
+AGE,years,age in years
+ALBUMIN,g/dL,albumin (average for 24h periiod)
+ALCOHOLIC_NONALCOHOLIC_LIVER_DISEASE,undescribed,boolean
+ALT_LOG2,IU/L,alanine aminotransferase in log2 scale (average for 24h periiod)
+ANION_GAP,mmoL/L,anion gap (average for 24h periiod)
+ANTICOAGULANTS,boolean,"indicates that the patient received anticoagulants: any of apixaban, enoxaparin, heparin, rivaroxaban, or tissue plasminogen activator"
+ANTICYTOKINES,boolean,indicates that the patient received anticytokines: any of tocilizumab or anakinra
+APTT_LOG2,seconds,activated partial thromboplastin time in log2 scale (average for 24h perid)
+ARDS,boolean,acute respiratory distress syndrome 
+ASTHMA,boolean,asthma
+AST_LOG2,IU/L,aspartate aminotransferase in log2 scale (average for 24h periiod)
+ATRIAL_FIBRILLATION,boolean,atrial fibrillation
+BASE_EXCESS_VENOUS,mmoL/L,base excess venous (average for 24h periiod)
+BASOPHIL_NO,mmoL/L,number of basophils (average for 24h period)
+BASOPHIL_PERCENT,x10 3/uL,percent of basophils (average for 24h period)
+BILIRUBIN,mg/DL,bilirubin (average for 24h periiod)
+BLOOD_TYPE,undescribed,"patient blood type (limited data, often causes analyses to fail)"
+BMI,kg/m2,body mass index
+BRAIN_TRIURETIC_PROTEIN_LOG2,pg/mL,brain triuretic protein in log2 scale (average for 24h periiod)
+BUN,mg/dL,blood urea nitrogen (average for 24h periiod)
+CALCIUM,mg/dL,calcium (average for 24h periiod)
+CANCER_FLAG,character,cancer diagnosis as boolean variable
+CEREBRAL_INFARCTION,undescribed,boolean
+CHF,boolean,congestive heart failure
+CHLORIDE,mmol/L,chloride (average for 24h periiod)
+CHRONIC_VIRAL_HEPATITIS,undescribed,boolean
+CKD,boolean,chronic kidney disease
+COPD,boolean,chronic obstructive pulmonary disease
+CORONARY_ARTERY_DISEASE,undescribed,boolean
+CREATINE_KINASE,ng/mL,creatine kinase (average for 24h periiod)
+CREATININE_LOG2,ng/mL,creatine in log2 scale (average for 24h periiod)
+CRP_LOG2,mg/L,c-reactive protein in log2 scale (average for 24h periiod)
+D_DIMER_LOG2,mg/L FEU,d-dimer in log2 scale (average for 24h periiod)
+DEATH,boolean,boolean for deceased with 1 being deceased and 0 being still alive at time of last follow-up
+DIABETES,boolean,diabetes 
+DIASTOL_BP_MAX,mmHg,maximum diastolic blood pressure for 24h period
+EGFR,ml/min/1.73m2,estimated glomerular filtration rate (average for 24h period)
+EOSINOPHIL_(PERCENT),percent,percent of eosinophils (average for 24h period)
+EOSINOPHIL_NO,x10 3/uL,number of eosinophils (average for 24h period)
+ESR,mm/hr,erythrocyte sedimentation rate (average for 24h period)
+FERRITIN_LOG2,ng/ml,ferritin in log2 scale (average for 24h periiod)
+FIBRINOGEN_LOG2,mg/dl,fibrinogen in log2 scale (average for 24h periiod)
+GENDER,undescribed,undescribed
+GLUCOSE,mg/dl,glucose (average for 24h period)
+HCO3_ARTERIAL,MEQ/L,arterial hco3  (average for 24h period)
+HCO3_VENOUS,MEQ/L,venous hc03  (average for 24h period)
+HEMATOCRIT_LOG2,percent,hematocrit in log2 scale  (average for 24h period)
+HEMOGLOBIN,g/dl,hemoglobin  (average for 24h period)
+HYDROXYCHLOROQUINE,boolean,indicates that the patient received hydroxychloroquine
+INR_LOG2,undescribed,international normalized ratio in log2 scale (average for 24h period)
+LDH_LOG2,IU/L,lactate dehydrogenase in log2 scale (average for 24h period)
+LYMPHOCYTE_(PERCENT),percent,percent of lymphocytes (average for 24h period)
+LYMPHOCYTE_NO,x10E3/uL,number of lymphocytes (average for 24h period)
+MEAN_PLATELET_VOLUME,fl,mean platelet volume (for 24h period)
+MONOCYTE_(PERCENT),percent,percent of monocytes (average for 24h period)
+MONOCYTE_NO,x10E3/uL,number of monocytes (average for 24h period)
+NEUTROPHIL_(PERCENT),percent,percent of neutrophils (average for 24h period)
+NEUTROPHIL_NO,x10 e3/uL,number of neutrophils (average for 24h period)
+O2SAT_MIN,undescribed,minimum oxygen staturation for 24h period
+O2_SATURATION_VENOUS,undescribed,venous o2 saturation (average for 24h period)
+PC02_VENOUS,undescribed,venous pco2 (average for 24h period)
+PCO2_ARTERIAL,undescribed,arterial pco2 (average for 24h period)
+PH_ARTERIAL,undescribed,arterial pH (average for 24h period)
+PH_VENOUS,undescribed,venous pH (average for 24h period)
+PLATELET,x10E3/ul,platelets (average for 24h period)
+PO2_ARTERIAL,undescribed,arterial po2 (average for 24h period)
+PO2_VENOUS,undescribed,venous po2 (average for 24h period)
+POTASSIUM,mmol/L,potassium (average for 24h period)
+PROCALCITONIN_LOG2,ng/mL,procalcitonin in log2 scale (average for 24h period)
+PROTHROMBIN_TIME,seconds,prothrombin time (average for 24h period)
+RBC_COUNT,x10E6/uL,red blood cell count (average for 24h period)
+REMDESIVIR,boolean,indicates that the patient received remdesivir
+RESP_RATE_MAX,undescribed,maximum respiratory rate for 24h period
+SEVERITY_NUMERIC,1-3,1 indicates no high flow oxygen therapy and SpO2≥94% without pneumonia on imaging; 2 indicates high flow oxygen therapy without vasopressors and no sever kidney or liver lab abnormalities; 3 indicates high flow oxygen with vasopressors or inootropes and severe kidney or liver dysfunction
+SLEEP_APNEA,boolean,sleep apnea
+SMOKING_STATUS,undescribed,smoking information
+SODIUM,mmol/L,sodium (average for 24h period)
+STEROIDS,boolean,"indicates that the patient received steroids: any of dexamethasone, hydrocortisone, methylprednisolone, prednisolone, prednisone, or dexamethasone"
+SYSTOL_BP_MAX,undescribed,maximum systolic blood pressure for 24h period
+TEMP_MAX,fahrenheit,maximum temperature for 24h period
+TROPONIN_I_LOG2,ng/mL,troponin in log2 scale (average for 24h period)
+URIC_ACID,mg/dL,uric acid (average for 24h period)
+WBC_COUNT,x10E3/ul,white blood cell count (average for 24h period)

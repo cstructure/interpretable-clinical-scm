@@ -1,0 +1,492 @@
+{
+  "nodes": [
+    {
+      "id": "Age",
+      "position": {
+        "x": 40,
+        "y": 15
+      },
+      "data": {
+        "label": "Age",
+        "narrative": "Patient's age in years.",
+        "type": "unadjusted",
+        "featureSource": {
+          "sdy1662_data_dictionary.csv": {
+            "featureID": [
+              "AGE"
+            ],
+            "featureCategory": "Continuous"
+          }
+        }
+      },
+      "type": "unadjusted",
+      "xPos": 40,
+      "yPos": 15,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40
+    },
+    {
+      "id": "BMI",
+      "position": {
+        "x": 40,
+        "y": 99.375
+      },
+      "data": {
+        "label": "BMI",
+        "narrative": "Body Mass Index.",
+        "type": "unadjusted",
+        "featureSource": {
+          "sdy1662_data_dictionary.csv": {
+            "featureID": [
+              "BMI"
+            ],
+            "featureCategory": "Continuous"
+          }
+        }
+      },
+      "type": "unadjusted",
+      "xPos": 40,
+      "yPos": 99.375,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40
+    },
+    {
+      "id": "Comorbidities",
+      "position": {
+        "x": 40,
+        "y": 279.375
+      },
+      "data": {
+        "label": "Comorbidities",
+        "narrative": "A composite of pre-existing conditions that could affect COVID-19 severity and outcomes.",
+        "type": "unadjusted",
+        "featureSource": {
+          "sdy1662_data_dictionary.csv": {
+            "featureID": [
+              "DIABETES",
+              "CHF",
+              "CKD",
+              "COPD",
+              "CANCER_FLAG",
+              "CORONARY_ARTERY_DISEASE",
+              "ASTHMA",
+              "SLEEP_APNEA"
+            ],
+            "featureCategory": "Binary"
+          }
+        }
+      },
+      "type": "unadjusted",
+      "xPos": 40,
+      "yPos": 279.375,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40
+    },
+    {
+      "id": "Severity",
+      "position": {
+        "x": 220,
+        "y": 108.75
+      },
+      "data": {
+        "label": "Severity Score",
+        "narrative": "A numeric score indicating the severity of the patient's condition upon admission.",
+        "type": "adjusted",
+        "featureSource": {
+          "sdy1662_data_dictionary.csv": {
+            "featureID": [
+              "SEVERITY_NUMERIC"
+            ],
+            "featureCategory": "Ordinal"
+          }
+        }
+      },
+      "type": "adjusted",
+      "xPos": 220,
+      "yPos": 108.75,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40
+    },
+    {
+      "id": "Inflammation",
+      "position": {
+        "x": 400,
+        "y": 163.125
+      },
+      "data": {
+        "label": "Inflammation",
+        "narrative": "Markers of systemic inflammation, which are key indicators of COVID-19 severity.",
+        "type": "adjusted",
+        "featureSource": {
+          "sdy1662_data_dictionary.csv": {
+            "featureID": [
+              "CRP_LOG2",
+              "FERRITIN_LOG2",
+              "LDH_LOG2",
+              "D_DIMER_LOG2"
+            ],
+            "featureCategory": "Continuous"
+          }
+        }
+      },
+      "type": "adjusted",
+      "xPos": 400,
+      "yPos": 163.125,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40
+    },
+    {
+      "id": "OxygenSaturation",
+      "position": {
+        "x": 400,
+        "y": 230.625
+      },
+      "data": {
+        "label": "Min O2 Saturation",
+        "narrative": "Minimum oxygen saturation, a critical measure of respiratory function.",
+        "type": "adjusted",
+        "featureSource": {
+          "sdy1662_data_dictionary.csv": {
+            "featureID": [
+              "O2SAT_MIN"
+            ],
+            "featureCategory": "Continuous"
+          }
+        }
+      },
+      "type": "adjusted",
+      "xPos": 400,
+      "yPos": 230.625,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40
+    },
+    {
+      "id": "Steroids",
+      "position": {
+        "x": 580,
+        "y": 189.375
+      },
+      "data": {
+        "label": "Steroids",
+        "narrative": "Administration of glucocorticoids (e.g., dexamethasone) during hospitalization.",
+        "type": "action",
+        "featureSource": {
+          "sdy1662_data_dictionary.csv": {
+            "featureID": [
+              "STEROIDS"
+            ],
+            "featureCategory": "Binary"
+          }
+        }
+      },
+      "type": "action",
+      "xPos": 580,
+      "yPos": 189.375,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40
+    },
+    {
+      "id": "OtherTreatments",
+      "position": {
+        "x": 580,
+        "y": 108.75
+      },
+      "data": {
+        "label": "Other Treatments",
+        "narrative": "Other significant treatments administered that could confound the effect of steroids.",
+        "type": "adjusted",
+        "featureSource": {
+          "sdy1662_data_dictionary.csv": {
+            "featureID": [
+              "REMDESIVIR",
+              "ANTICOAGULANTS",
+              "ANTICYTOKINES"
+            ],
+            "featureCategory": "Binary"
+          }
+        }
+      },
+      "type": "adjusted",
+      "xPos": 580,
+      "yPos": 108.75,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40
+    },
+    {
+      "id": "Death",
+      "position": {
+        "x": 760,
+        "y": 103.125
+      },
+      "data": {
+        "label": "28-Day Mortality",
+        "narrative": "Death within 28 days of hospital admission.",
+        "type": "outcome",
+        "featureSource": {
+          "sdy1662_data_dictionary.csv": {
+            "featureID": [
+              "DEATH"
+            ],
+            "featureCategory": "Binary"
+          }
+        }
+      },
+      "type": "outcome",
+      "xPos": 760,
+      "yPos": 103.125,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40
+    }
+  ],
+  "edges": [
+    {
+      "id": "Age->Severity",
+      "source": "Age",
+      "target": "Severity",
+      "targetHandle": "left",
+      "type": "biased",
+      "updatable": true,
+      "data": {
+        "narrative": "Older age is a risk factor for more severe COVID-19."
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ff771cff"
+      }
+    },
+    {
+      "id": "BMI->Severity",
+      "source": "BMI",
+      "target": "Severity",
+      "targetHandle": "left",
+      "type": "default",
+      "updatable": true,
+      "data": {
+        "narrative": "Higher BMI is associated with more severe COVID-19."
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      }
+    },
+    {
+      "id": "Comorbidities->Severity",
+      "source": "Comorbidities",
+      "target": "Severity",
+      "targetHandle": "left",
+      "type": "biased",
+      "updatable": true,
+      "data": {
+        "narrative": "Pre-existing conditions increase the risk of severe COVID-19."
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ff771cff"
+      }
+    },
+    {
+      "id": "Severity->Steroids",
+      "source": "Severity",
+      "target": "Steroids",
+      "targetHandle": "left",
+      "type": "default",
+      "updatable": true,
+      "data": {
+        "narrative": "Patients with more severe disease are more likely to be treated with steroids."
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      }
+    },
+    {
+      "id": "Inflammation->Steroids",
+      "source": "Inflammation",
+      "target": "Steroids",
+      "targetHandle": "left",
+      "type": "default",
+      "updatable": true,
+      "data": {
+        "narrative": "High levels of inflammation often lead to the administration of steroids."
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      }
+    },
+    {
+      "id": "OxygenSaturation->Steroids",
+      "source": "OxygenSaturation",
+      "target": "Steroids",
+      "targetHandle": "left",
+      "type": "default",
+      "updatable": true,
+      "data": {
+        "narrative": "Low oxygen saturation is a key indicator for steroid treatment."
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      }
+    },
+    {
+      "id": "Steroids->Death",
+      "source": "Steroids",
+      "target": "Death",
+      "targetHandle": "left",
+      "type": "causal",
+      "updatable": true,
+      "data": {
+        "narrative": "The causal effect of interest: Do steroids increase or decrease the risk of death?"
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#00dfa7"
+      }
+    },
+    {
+      "id": "Severity->Death",
+      "source": "Severity",
+      "target": "Death",
+      "targetHandle": "left",
+      "type": "default",
+      "updatable": true,
+      "data": {
+        "narrative": "Disease severity is a strong predictor of mortality."
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      }
+    },
+    {
+      "id": "Age->Death",
+      "source": "Age",
+      "target": "Death",
+      "targetHandle": "left",
+      "type": "biased",
+      "updatable": true,
+      "data": {
+        "narrative": "Age is a direct risk factor for mortality in COVID-19."
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ff771cff"
+      }
+    },
+    {
+      "id": "Comorbidities->Death",
+      "source": "Comorbidities",
+      "target": "Death",
+      "targetHandle": "left",
+      "type": "biased",
+      "updatable": true,
+      "data": {
+        "narrative": "Comorbidities directly increase the risk of death."
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ff771cff"
+      }
+    },
+    {
+      "id": "Severity->OtherTreatments",
+      "source": "Severity",
+      "target": "OtherTreatments",
+      "targetHandle": "left",
+      "type": "default",
+      "updatable": true,
+      "data": {
+        "narrative": "Severe disease may lead to the use of other treatments."
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      }
+    },
+    {
+      "id": "OtherTreatments->Death",
+      "source": "OtherTreatments",
+      "target": "Death",
+      "targetHandle": "left",
+      "type": "default",
+      "updatable": true,
+      "data": {
+        "narrative": "Other treatments can affect patient survival."
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      }
+    },
+    {
+      "id": "Age->Steroids",
+      "source": "Age",
+      "target": "Steroids",
+      "targetHandle": "left",
+      "type": "biased",
+      "updatable": true,
+      "data": {
+        "narrative": "Age may influence a clinician's decision to prescribe steroids."
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ff771cff"
+      }
+    },
+    {
+      "id": "Comorbidities->Steroids",
+      "source": "Comorbidities",
+      "target": "Steroids",
+      "targetHandle": "left",
+      "type": "biased",
+      "updatable": true,
+      "data": {
+        "narrative": "Certain comorbidities might make clinicians more or less likely to prescribe steroids."
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ff771cff"
+      }
+    },
+    {
+      "id": "Severity->Inflammation",
+      "source": "Severity",
+      "target": "Inflammation",
+      "targetHandle": "left",
+      "type": "default",
+      "updatable": true,
+      "data": {
+        "narrative": "The overall severity of the disease state is reflected in the inflammatory markers."
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      }
+    },
+    {
+      "id": "Severity->OxygenSaturation",
+      "source": "Severity",
+      "target": "OxygenSaturation",
+      "targetHandle": "left",
+      "type": "default",
+      "updatable": true,
+      "data": {
+        "narrative": "The overall severity of the disease state impacts oxygen saturation levels."
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      }
+    }
+  ]
+}

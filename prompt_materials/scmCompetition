@@ -1,0 +1,34 @@
+Open a google Chrome browser and navigate to 
+https://cstructure.net
+Sign in with a “gmail.com” account
+Click on Project Dashboard to access shared projects
+To start a new project, click on new project icon on the top right side and enter project info and
+collaborators - this is a live shared workspace
+The purpose of this activity is to create a relationship between factors+interventions+outcomes.
+These 3 variables can be represented by a node. To add a variable, click on “Add node” and enter
+relevant information to describe it in the Narrative section.
+Factors: can be any variable that may impact interventions and outcomes. The most important
+factors for real world analyses are variables that cause the intervention AND cause the outcome
+(aka common causes), such as disease severity because they introduce bias when analyzing the
+relationship between intervention and outcome.
+Factors can be unadjusted or adjusted.
+In unadjusted factors, no attempt has been made to control for confounding variables. In other
+words, the relationships between variables are examined without considering other factors that might
+influence these relationships. This can lead to biased estimates of causal effects if there are
+unobserved confounders, which is usually reflected by an orange arrow between nodes.
+In adjusted factors, these variables have been controlled for in the model. Adjustments are typically
+made to account for potential confounding factors that could distort the true causal relationship
+between variables of interest. This is depicted by a gray arrow between the nodes. It is the
+participants goal to evaluate each variable and determine whether or not to adjust. Diagrams with
+most adjusted variables (least unadjusted) are typically more reflective of accurate structural causal
+models.
+
+While inside the canvas there are a few keyboard shortcuts to be aware of that can convert nodes to
+different types of variables. Simply, click on the node and press one of the following letters on your
+keyboard.
+U = unadjusted
+A = adjusted
+I = action
+O outcome
+For more information about each function on the canvas and definitions, click on the question mark
+at the bottom right of the page to access the cheat sheet.

@@ -1,0 +1,406 @@
+{
+  "nodes": [
+    {
+      "id": "Steroids",
+      "position": {
+        "x": 400,
+        "y": 127.5
+      },
+      "data": {
+        "label": "Steroids",
+        "narrative": "Indicator that the patient received systemic corticosteroids (e.g. dexamethasone, hydrocortisone, methylprednisolone, prednisolone, prednisone) during the index hospitalization.",
+        "type": "action",
+        "featureSource": {
+          "sdy1662.csv": {
+            "featureID": [
+              "STEROIDS"
+            ],
+            "featureCategory": "Binary"
+          }
+        }
+      },
+      "type": "action",
+      "xPos": 400,
+      "yPos": 127.5,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40
+    },
+    {
+      "id": "Survival28Days",
+      "position": {
+        "x": 580,
+        "y": 106.875
+      },
+      "data": {
+        "label": "28-day Survival",
+        "narrative": "Patient survival status 28 days after hospital admission (1 = alive, 0 = died).  Proxied by the DEATH flag truncated at 28&nbsp;days.",
+        "type": "outcome",
+        "featureSource": {
+          "sdy1662.csv": {
+            "featureID": [
+              "DEATH"
+            ],
+            "featureCategory": "Binary"
+          }
+        }
+      },
+      "type": "outcome",
+      "xPos": 580,
+      "yPos": 106.875,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40
+    },
+    {
+      "id": "Age",
+      "position": {
+        "x": 40,
+        "y": 232.5
+      },
+      "data": {
+        "label": "Age",
+        "narrative": "Age in years at admission, a strong prognostic factor that can also influence treatment decisions.",
+        "type": "adjusted",
+        "featureSource": {
+          "sdy1662.csv": {
+            "featureID": [
+              "AGE"
+            ],
+            "featureCategory": "Continuous"
+          }
+        }
+      },
+      "type": "adjusted",
+      "xPos": 40,
+      "yPos": 232.5,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40
+    },
+    {
+      "id": "Gender",
+      "position": {
+        "x": 40,
+        "y": 127.5
+      },
+      "data": {
+        "label": "Sex",
+        "narrative": "Patient biological sex (male / female).",
+        "type": "adjusted",
+        "featureSource": {
+          "sdy1662.csv": {
+            "featureID": [
+              "GENDER"
+            ],
+            "featureCategory": "Binary"
+          }
+        }
+      },
+      "type": "adjusted",
+      "xPos": 40,
+      "yPos": 127.5,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40
+    },
+    {
+      "id": "Comorbidities",
+      "position": {
+        "x": 40,
+        "y": 56.25
+      },
+      "data": {
+        "label": "Comorbidities",
+        "narrative": "Baseline chronic conditions associated with COVID-19 prognosis and possibly influencing steroid use decisions (diabetes, chronic kidney disease, congestive heart failure, chronic obstructive pulmonary disease, coronary artery disease, active cancer).",
+        "type": "adjusted",
+        "featureSource": {
+          "sdy1662.csv": {
+            "featureID": [
+              "DIABETES",
+              "CKD",
+              "CHF",
+              "COPD",
+              "CORONARY_ARTERY_DISEASE",
+              "CANCER_FLAG"
+            ],
+            "featureCategory": "Binary"
+          }
+        }
+      },
+      "type": "adjusted",
+      "xPos": 40,
+      "yPos": 56.25,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40
+    },
+    {
+      "id": "BaselineSeverity",
+      "position": {
+        "x": 220,
+        "y": 176.25
+      },
+      "data": {
+        "label": "Severity",
+        "narrative": "Clinical severity of illness on admission quantified by the numeric severity score (1–3) incorporating oxygen needs and organ dysfunction.",
+        "type": "adjusted",
+        "featureSource": {
+          "sdy1662.csv": {
+            "featureID": [
+              "SEVERITY_NUMERIC"
+            ],
+            "featureCategory": "Ordinal"
+          }
+        }
+      },
+      "type": "adjusted",
+      "xPos": 220,
+      "yPos": 176.25,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40
+    },
+    {
+      "id": "OtherTherapies",
+      "position": {
+        "x": 220,
+        "y": 15
+      },
+      "data": {
+        "label": "Other Meds",
+        "narrative": "Receipt of other in-hospital COVID-19 directed therapies that may act as confounders or effect modifiers (anticoagulants, anticytokines, hydroxychloroquine, remdesivir).",
+        "type": "adjusted",
+        "featureSource": {
+          "sdy1662.csv": {
+            "featureID": [
+              "ANTICOAGULANTS",
+              "ANTICYTOKINES",
+              "HYDROXYCHLOROQUINE",
+              "REMDESIVIR"
+            ],
+            "featureCategory": "Binary"
+          }
+        }
+      },
+      "type": "adjusted",
+      "xPos": 220,
+      "yPos": 15,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40
+    }
+  ],
+  "edges": [
+    {
+      "id": "Age->BaselineSeverity",
+      "source": "Age",
+      "target": "BaselineSeverity",
+      "targetHandle": "left",
+      "type": "default",
+      "updatable": true,
+      "data": {
+        "narrative": "Older patients typically present with more severe illness."
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      }
+    },
+    {
+      "id": "Age->Steroids",
+      "source": "Age",
+      "target": "Steroids",
+      "targetHandle": "left",
+      "type": "default",
+      "updatable": true,
+      "data": {
+        "narrative": "Clinicians may preferentially prescribe or withhold steroids based on patient age."
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      }
+    },
+    {
+      "id": "Age->Survival28Days",
+      "source": "Age",
+      "target": "Survival28Days",
+      "targetHandle": "left",
+      "type": "default",
+      "updatable": true,
+      "data": {
+        "narrative": "Age is a well-known independent predictor of mortality."
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      }
+    },
+    {
+      "id": "Gender->BaselineSeverity",
+      "source": "Gender",
+      "target": "BaselineSeverity",
+      "targetHandle": "left",
+      "type": "default",
+      "updatable": true,
+      "data": {
+        "narrative": "Male sex has been associated with more severe COVID-19."
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      }
+    },
+    {
+      "id": "Gender->Steroids",
+      "source": "Gender",
+      "target": "Steroids",
+      "targetHandle": "left",
+      "type": "default",
+      "updatable": true,
+      "data": {
+        "narrative": "Treatment practices may vary by sex."
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      }
+    },
+    {
+      "id": "Gender->Survival28Days",
+      "source": "Gender",
+      "target": "Survival28Days",
+      "targetHandle": "left",
+      "type": "default",
+      "updatable": true,
+      "data": {
+        "narrative": "Sex differences in COVID-19 outcomes are documented."
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      }
+    },
+    {
+      "id": "Comorbidities->BaselineSeverity",
+      "source": "Comorbidities",
+      "target": "BaselineSeverity",
+      "targetHandle": "left",
+      "type": "default",
+      "updatable": true,
+      "data": {
+        "narrative": "Pre-existing conditions contribute to illness severity."
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      }
+    },
+    {
+      "id": "Comorbidities->Steroids",
+      "source": "Comorbidities",
+      "target": "Steroids",
+      "targetHandle": "left",
+      "type": "default",
+      "updatable": true,
+      "data": {
+        "narrative": "Presence of certain comorbidities may influence steroid prescribing."
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      }
+    },
+    {
+      "id": "Comorbidities->Survival28Days",
+      "source": "Comorbidities",
+      "target": "Survival28Days",
+      "targetHandle": "left",
+      "type": "default",
+      "updatable": true,
+      "data": {
+        "narrative": "Comorbidities independently affect survival."
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      }
+    },
+    {
+      "id": "BaselineSeverity->Steroids",
+      "source": "BaselineSeverity",
+      "target": "Steroids",
+      "targetHandle": "left",
+      "type": "default",
+      "updatable": true,
+      "data": {
+        "narrative": "Severity strongly drives clinical decision to initiate steroids."
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      }
+    },
+    {
+      "id": "BaselineSeverity->Survival28Days",
+      "source": "BaselineSeverity",
+      "target": "Survival28Days",
+      "targetHandle": "left",
+      "type": "default",
+      "updatable": true,
+      "data": {
+        "narrative": "Baseline severity is prognostic for mortality."
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      }
+    },
+    {
+      "id": "OtherTherapies->Steroids",
+      "source": "OtherTherapies",
+      "target": "Steroids",
+      "targetHandle": "left",
+      "type": "default",
+      "updatable": true,
+      "data": {
+        "narrative": "Use of one therapy is correlated with use of others due to treatment protocols."
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      }
+    },
+    {
+      "id": "OtherTherapies->Survival28Days",
+      "source": "OtherTherapies",
+      "target": "Survival28Days",
+      "targetHandle": "left",
+      "type": "default",
+      "updatable": true,
+      "data": {
+        "narrative": "Co-administered treatments may improve or worsen survival."
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      }
+    },
+    {
+      "id": "Steroids->Survival28Days",
+      "source": "Steroids",
+      "target": "Survival28Days",
+      "targetHandle": "left",
+      "type": "causal",
+      "updatable": true,
+      "data": {
+        "narrative": "Primary causal effect of interest: systemic steroids may improve survival by modulating inflammation but may also cause harms."
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#00dfa7"
+      }
+    }
+  ]
+}

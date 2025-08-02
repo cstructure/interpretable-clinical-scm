@@ -1,0 +1,755 @@
+{
+  "nodes": [
+    {
+      "id": "Age",
+      "position": {
+        "x": 40,
+        "y": 225
+      },
+      "data": {
+        "label": "Age",
+        "narrative": "Patient age at admission. Older age is associated with worse COVID-19 outcomes and may influence treatment decisions.",
+        "type": "adjusted",
+        "featureSource": {
+          "sdy1662.csv": {
+            "featureID": [
+              "age"
+            ],
+            "featureCategory": "Continuous"
+          }
+        }
+      },
+      "type": "adjusted",
+      "xPos": 40,
+      "yPos": 225,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40
+    },
+    {
+      "id": "Sex",
+      "position": {
+        "x": 40,
+        "y": 371.25
+      },
+      "data": {
+        "label": "Sex",
+        "narrative": "Biological sex of the patient. Sex differences may affect COVID-19 severity and treatment response.",
+        "type": "adjusted",
+        "featureSource": {
+          "sdy1662.csv": {
+            "featureID": [
+              "sex"
+            ],
+            "featureCategory": "Binary"
+          }
+        }
+      },
+      "type": "adjusted",
+      "xPos": 40,
+      "yPos": 371.25,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40
+    },
+    {
+      "id": "Race",
+      "position": {
+        "x": 220,
+        "y": 142.5
+      },
+      "data": {
+        "label": "Race",
+        "narrative": "Patient's race/ethnicity. Important for understanding health disparities and potential differences in treatment access or response.",
+        "type": "adjusted",
+        "featureSource": {
+          "sdy1662.csv": {
+            "featureID": [
+              "race"
+            ],
+            "featureCategory": "Categorical"
+          }
+        }
+      },
+      "type": "adjusted",
+      "xPos": 220,
+      "yPos": 142.5,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40
+    },
+    {
+      "id": "BMI",
+      "position": {
+        "x": 40,
+        "y": 506.25
+      },
+      "data": {
+        "label": "BMI",
+        "narrative": "Body Mass Index. Obesity is a known risk factor for severe COVID-19 and may influence treatment decisions.",
+        "type": "adjusted",
+        "featureSource": {
+          "sdy1662.csv": {
+            "featureID": [
+              "bmi"
+            ],
+            "featureCategory": "Continuous"
+          }
+        }
+      },
+      "type": "adjusted",
+      "xPos": 40,
+      "yPos": 506.25,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40
+    },
+    {
+      "id": "Diabetes",
+      "position": {
+        "x": 40,
+        "y": 438.75
+      },
+      "data": {
+        "label": "Diabetes",
+        "narrative": "Presence of diabetes mellitus. Major risk factor for severe COVID-19 and influences steroid treatment considerations.",
+        "type": "adjusted",
+        "featureSource": {
+          "sdy1662.csv": {
+            "featureID": [
+              "diabetes_mellitus"
+            ],
+            "featureCategory": "Binary"
+          }
+        }
+      },
+      "type": "adjusted",
+      "xPos": 40,
+      "yPos": 438.75,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40
+    },
+    {
+      "id": "Hypertension",
+      "position": {
+        "x": 40,
+        "y": 573.75
+      },
+      "data": {
+        "label": "Hypertension",
+        "narrative": "Presence of hypertension. Common comorbidity affecting COVID-19 severity and treatment response.",
+        "type": "adjusted",
+        "featureSource": {
+          "sdy1662.csv": {
+            "featureID": [
+              "hypertension"
+            ],
+            "featureCategory": "Binary"
+          }
+        }
+      },
+      "type": "adjusted",
+      "xPos": 40,
+      "yPos": 573.75,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40
+    },
+    {
+      "id": "CardiovascularDisease",
+      "position": {
+        "x": 580,
+        "y": 15
+      },
+      "data": {
+        "label": "Cardiovascular Disease",
+        "narrative": "Presence of cardiovascular disease. Major risk factor for COVID-19 mortality.",
+        "type": "adjusted",
+        "featureSource": {
+          "sdy1662.csv": {
+            "featureID": [
+              "cardiovascular_disease"
+            ],
+            "featureCategory": "Binary"
+          }
+        }
+      },
+      "type": "adjusted",
+      "xPos": 580,
+      "yPos": 15,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40
+    },
+    {
+      "id": "PulmonaryDisease",
+      "position": {
+        "x": 40,
+        "y": 641.25
+      },
+      "data": {
+        "label": "Pulmonary Disease",
+        "narrative": "Chronic pulmonary disease including COPD and asthma. Affects respiratory function and COVID-19 severity.",
+        "type": "adjusted",
+        "featureSource": {
+          "sdy1662.csv": {
+            "featureID": [
+              "copd",
+              "asthma"
+            ],
+            "featureCategory": "Binary"
+          }
+        }
+      },
+      "type": "adjusted",
+      "xPos": 40,
+      "yPos": 641.25,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40
+    },
+    {
+      "id": "RenalDisease",
+      "position": {
+        "x": 580,
+        "y": 82.5
+      },
+      "data": {
+        "label": "Renal Disease",
+        "narrative": "Chronic kidney disease. Affects drug metabolism and is associated with worse COVID-19 outcomes.",
+        "type": "adjusted",
+        "featureSource": {
+          "sdy1662.csv": {
+            "featureID": [
+              "chronic_kidney_disease"
+            ],
+            "featureCategory": "Binary"
+          }
+        }
+      },
+      "type": "adjusted",
+      "xPos": 580,
+      "yPos": 82.5,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40
+    },
+    {
+      "id": "Immunocompromised",
+      "position": {
+        "x": 40,
+        "y": 708.75
+      },
+      "data": {
+        "label": "Immunocompromised",
+        "narrative": "Immunocompromised status including HIV, cancer, or immunosuppressive therapy. Affects treatment response and outcomes.",
+        "type": "adjusted",
+        "featureSource": {
+          "sdy1662.csv": {
+            "featureID": [
+              "immunocompromised",
+              "hiv",
+              "cancer"
+            ],
+            "featureCategory": "Binary"
+          }
+        }
+      },
+      "type": "adjusted",
+      "xPos": 40,
+      "yPos": 708.75,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40
+    },
+    {
+      "id": "COVIDSeverity",
+      "position": {
+        "x": 220,
+        "y": 418.125
+      },
+      "data": {
+        "label": "COVID Severity",
+        "narrative": "COVID-19 disease severity at baseline, categorized as low, moderate, or severe based on clinical criteria.",
+        "type": "adjusted",
+        "featureSource": {
+          "sdy1662.csv": {
+            "featureID": [
+              "disease_severity"
+            ],
+            "featureCategory": "Ordinal"
+          }
+        }
+      },
+      "type": "adjusted",
+      "xPos": 220,
+      "yPos": 418.125,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40
+    },
+    {
+      "id": "OxygenRequirement",
+      "position": {
+        "x": 220,
+        "y": 232.5
+      },
+      "data": {
+        "label": "Oxygen Requirement",
+        "narrative": "Oxygen supplementation requirement indicating respiratory compromise severity.",
+        "type": "adjusted",
+        "featureSource": {
+          "sdy1662.csv": {
+            "featureID": [
+              "supplemental_oxygen",
+              "high_flow_oxygen",
+              "non_invasive_ventilation",
+              "invasive_ventilation",
+              "ecmo"
+            ],
+            "featureCategory": "Ordinal"
+          }
+        }
+      },
+      "type": "adjusted",
+      "xPos": 220,
+      "yPos": 232.5,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40
+    },
+    {
+      "id": "DaysFromOnset",
+      "position": {
+        "x": 220,
+        "y": 315
+      },
+      "data": {
+        "label": "Days from Onset",
+        "narrative": "Days from symptom onset to hospitalization. Timing affects disease trajectory and treatment effectiveness.",
+        "type": "adjusted",
+        "featureSource": {
+          "sdy1662.csv": {
+            "featureID": [
+              "days_onset_to_hospitalization"
+            ],
+            "featureCategory": "Continuous"
+          }
+        }
+      },
+      "type": "adjusted",
+      "xPos": 220,
+      "yPos": 315,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40
+    },
+    {
+      "id": "Glucocorticoids",
+      "position": {
+        "x": 400,
+        "y": 211.875
+      },
+      "data": {
+        "label": "Glucocorticoids",
+        "narrative": "Administration of glucocorticoids (steroids) during hospitalization. Primary intervention of interest.",
+        "type": "action",
+        "featureSource": {
+          "sdy1662.csv": {
+            "featureID": [
+              "corticosteroids_this_adm"
+            ],
+            "featureCategory": "Binary"
+          }
+        }
+      },
+      "type": "action",
+      "xPos": 400,
+      "yPos": 211.875,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40
+    },
+    {
+      "id": "Hydroxychloroquine",
+      "position": {
+        "x": 580,
+        "y": 150
+      },
+      "data": {
+        "label": "Hydroxychloroquine",
+        "narrative": "Administration of hydroxychloroquine. Co-intervention that may affect outcomes.",
+        "type": "adjusted",
+        "featureSource": {
+          "sdy1662.csv": {
+            "featureID": [
+              "other_covid_therapeutic"
+            ],
+            "featureCategory": "Binary"
+          }
+        }
+      },
+      "type": "adjusted",
+      "xPos": 580,
+      "yPos": 150,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40
+    },
+    {
+      "id": "ICUAdmission",
+      "position": {
+        "x": 580,
+        "y": 232.5
+      },
+      "data": {
+        "label": "ICU Admission",
+        "narrative": "Admission to intensive care unit. Indicates disease severity and affects treatment intensity.",
+        "type": "unadjusted",
+        "featureSource": {
+          "sdy1662.csv": {
+            "featureID": [
+              "icu_admit"
+            ],
+            "featureCategory": "Binary"
+          }
+        }
+      },
+      "type": "unadjusted",
+      "xPos": 580,
+      "yPos": 232.5,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40
+    },
+    {
+      "id": "Mortality28Day",
+      "position": {
+        "x": 760,
+        "y": 206.25
+      },
+      "data": {
+        "label": "28-Day Mortality",
+        "narrative": "All-cause mortality within 28 days of hospitalization. Primary outcome of interest.",
+        "type": "outcome",
+        "featureSource": {
+          "sdy1662.csv": {
+            "featureID": [
+              "twentyeight_day_mort"
+            ],
+            "featureCategory": "Binary"
+          }
+        }
+      },
+      "type": "outcome",
+      "xPos": 760,
+      "yPos": 206.25,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40
+    }
+  ],
+  "edges": [
+    {
+      "id": "Age->COVIDSeverity",
+      "source": "Age",
+      "target": "COVIDSeverity",
+      "targetHandle": "left",
+      "type": "default",
+      "updatable": true,
+      "data": {
+        "narrative": "Older age is associated with more severe COVID-19 presentation due to immunosenescence and higher comorbidity burden."
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      }
+    },
+    {
+      "id": "Age->Glucocorticoids",
+      "source": "Age",
+      "target": "Glucocorticoids",
+      "targetHandle": "left",
+      "type": "default",
+      "updatable": true,
+      "data": {
+        "narrative": "Age may influence treatment decisions, with clinicians considering age-related risks and benefits."
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      }
+    },
+    {
+      "id": "Age->Mortality28Day",
+      "source": "Age",
+      "target": "Mortality28Day",
+      "targetHandle": "left",
+      "type": "default",
+      "updatable": true,
+      "data": {
+        "narrative": "Advanced age directly increases mortality risk through reduced physiologic reserve."
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      }
+    },
+    {
+      "id": "Sex->COVIDSeverity",
+      "source": "Sex",
+      "target": "COVIDSeverity",
+      "targetHandle": "left",
+      "type": "default",
+      "updatable": true,
+      "data": {
+        "narrative": "Male sex is associated with more severe COVID-19, possibly due to hormonal and immune differences."
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      }
+    },
+    {
+      "id": "Race->Glucocorticoids",
+      "source": "Race",
+      "target": "Glucocorticoids",
+      "targetHandle": "left",
+      "type": "default",
+      "updatable": true,
+      "data": {
+        "narrative": "Healthcare disparities may influence treatment access and decisions across racial groups."
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      }
+    },
+    {
+      "id": "BMI->COVIDSeverity",
+      "source": "BMI",
+      "target": "COVIDSeverity",
+      "targetHandle": "left",
+      "type": "default",
+      "updatable": true,
+      "data": {
+        "narrative": "Obesity increases COVID-19 severity through inflammation and mechanical respiratory compromise."
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      }
+    },
+    {
+      "id": "Diabetes->COVIDSeverity",
+      "source": "Diabetes",
+      "target": "COVIDSeverity",
+      "targetHandle": "left",
+      "type": "default",
+      "updatable": true,
+      "data": {
+        "narrative": "Diabetes impairs immune function and increases inflammation, worsening COVID-19 severity."
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      }
+    },
+    {
+      "id": "Diabetes->Mortality28Day",
+      "source": "Diabetes",
+      "target": "Mortality28Day",
+      "targetHandle": "left",
+      "type": "default",
+      "updatable": true,
+      "data": {
+        "narrative": "Diabetes independently increases mortality risk through multiple pathophysiologic mechanisms."
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      }
+    },
+    {
+      "id": "CardiovascularDisease->Mortality28Day",
+      "source": "CardiovascularDisease",
+      "target": "Mortality28Day",
+      "targetHandle": "left",
+      "type": "default",
+      "updatable": true,
+      "data": {
+        "narrative": "Cardiovascular disease directly increases mortality risk through cardiac complications."
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      }
+    },
+    {
+      "id": "PulmonaryDisease->COVIDSeverity",
+      "source": "PulmonaryDisease",
+      "target": "COVIDSeverity",
+      "targetHandle": "left",
+      "type": "default",
+      "updatable": true,
+      "data": {
+        "narrative": "Pre-existing lung disease reduces respiratory reserve, increasing COVID-19 severity."
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      }
+    },
+    {
+      "id": "RenalDisease->Mortality28Day",
+      "source": "RenalDisease",
+      "target": "Mortality28Day",
+      "targetHandle": "left",
+      "type": "default",
+      "updatable": true,
+      "data": {
+        "narrative": "Chronic kidney disease increases mortality through metabolic derangements and reduced drug clearance."
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      }
+    },
+    {
+      "id": "COVIDSeverity->Glucocorticoids",
+      "source": "COVIDSeverity",
+      "target": "Glucocorticoids",
+      "targetHandle": "left",
+      "type": "default",
+      "updatable": true,
+      "data": {
+        "narrative": "Disease severity strongly influences steroid treatment decisions per clinical guidelines."
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      }
+    },
+    {
+      "id": "COVIDSeverity->Mortality28Day",
+      "source": "COVIDSeverity",
+      "target": "Mortality28Day",
+      "targetHandle": "left",
+      "type": "default",
+      "updatable": true,
+      "data": {
+        "narrative": "Higher disease severity directly increases mortality risk through organ dysfunction."
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      }
+    },
+    {
+      "id": "OxygenRequirement->Glucocorticoids",
+      "source": "OxygenRequirement",
+      "target": "Glucocorticoids",
+      "targetHandle": "left",
+      "type": "default",
+      "updatable": true,
+      "data": {
+        "narrative": "Oxygen requirement is a key criterion for steroid initiation in COVID-19 treatment protocols."
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      }
+    },
+    {
+      "id": "OxygenRequirement->Mortality28Day",
+      "source": "OxygenRequirement",
+      "target": "Mortality28Day",
+      "targetHandle": "left",
+      "type": "default",
+      "updatable": true,
+      "data": {
+        "narrative": "Higher oxygen requirements indicate respiratory failure and increased mortality risk."
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      }
+    },
+    {
+      "id": "DaysFromOnset->Glucocorticoids",
+      "source": "DaysFromOnset",
+      "target": "Glucocorticoids",
+      "targetHandle": "left",
+      "type": "default",
+      "updatable": true,
+      "data": {
+        "narrative": "Timing from symptom onset affects treatment decisions based on disease phase."
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      }
+    },
+    {
+      "id": "Glucocorticoids->Mortality28Day",
+      "source": "Glucocorticoids",
+      "target": "Mortality28Day",
+      "targetHandle": "left",
+      "type": "causal",
+      "updatable": true,
+      "data": {
+        "narrative": "Glucocorticoids may reduce mortality by modulating hyperinflammation in severe COVID-19."
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#00dfa7"
+      }
+    },
+    {
+      "id": "Hydroxychloroquine->Mortality28Day",
+      "source": "Hydroxychloroquine",
+      "target": "Mortality28Day",
+      "targetHandle": "left",
+      "type": "default",
+      "updatable": true,
+      "data": {
+        "narrative": "Hydroxychloroquine treatment may affect mortality, though evidence suggests limited benefit."
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      }
+    },
+    {
+      "id": "Glucocorticoids->ICUAdmission",
+      "source": "Glucocorticoids",
+      "target": "ICUAdmission",
+      "targetHandle": "left",
+      "type": "causal",
+      "updatable": true,
+      "data": {
+        "narrative": "Steroid treatment may reduce need for ICU admission by preventing disease progression."
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#00dfa7"
+      }
+    },
+    {
+      "id": "ICUAdmission->Mortality28Day",
+      "source": "ICUAdmission",
+      "target": "Mortality28Day",
+      "targetHandle": "left",
+      "type": "causal",
+      "updatable": true,
+      "data": {
+        "narrative": "ICU admission indicates critical illness but also provides intensive monitoring and support."
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#00dfa7"
+      }
+    }
+  ]
+}

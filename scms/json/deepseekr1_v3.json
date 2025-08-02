@@ -1,0 +1,249 @@
+{
+  "nodes": [
+    {
+      "id": "SteroidTreatment",
+      "position": {
+        "x": 220,
+        "y": 120
+      },
+      "data": {
+        "label": "Steroid Treatment",
+        "narrative": "Administration of steroid treatment (binary: treated/not treated)",
+        "type": "action",
+        "featureSource": {
+          "sdy1662.csv": {
+            "featureID": [
+              "STEROIDS"
+            ],
+            "featureCategory": "Binary"
+          }
+        },
+        "openModal": false
+      },
+      "type": "action",
+      "xPos": 220,
+      "yPos": 120,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40,
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "Survival28Day",
+      "position": {
+        "x": 580,
+        "y": 144.375
+      },
+      "data": {
+        "label": "Death",
+        "narrative": "Patient death status",
+        "type": "outcome",
+        "featureSource": {
+          "sdy1662.csv": {
+            "featureID": [
+              "DEATH"
+            ],
+            "featureCategory": "Binary"
+          }
+        },
+        "openModal": false
+      },
+      "type": "outcome",
+      "xPos": 580,
+      "yPos": 144.375,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40,
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "Age",
+      "position": {
+        "x": 40,
+        "y": 15
+      },
+      "data": {
+        "label": "Age",
+        "narrative": "Patient age at hospitalization",
+        "type": "adjusted",
+        "featureSource": {
+          "sdy1662.csv": {
+            "featureID": [
+              "AGE"
+            ],
+            "featureCategory": "Continuous"
+          }
+        },
+        "openModal": false
+      },
+      "type": "adjusted",
+      "xPos": 40,
+      "yPos": 15,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40,
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "DiseaseSeverity",
+      "position": {
+        "x": 40,
+        "y": 159.375
+      },
+      "data": {
+        "label": "Disease Severity",
+        "narrative": "Severity of illness at admission (1-3 scale)",
+        "type": "adjusted",
+        "featureSource": {
+          "sdy1662.csv": {
+            "featureID": [
+              "SEVERITY_NUMERIC"
+            ],
+            "featureCategory": "Continuous"
+          }
+        },
+        "openModal": false
+      },
+      "type": "adjusted",
+      "xPos": 40,
+      "yPos": 159.375,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40,
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "CRP",
+      "position": {
+        "x": 400,
+        "y": 63.75
+      },
+      "data": {
+        "label": "CRP",
+        "narrative": "Level of C-reactive protein (CRP), an inflammatory marker",
+        "type": "adjusted",
+        "featureSource": {},
+        "openModal": false
+      },
+      "type": "adjusted",
+      "xPos": 400,
+      "yPos": 63.75,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40,
+      "selected": false,
+      "dragging": false
+    }
+  ],
+  "edges": [
+    {
+      "id": "Age->SteroidTreatment",
+      "source": "Age",
+      "target": "SteroidTreatment",
+      "targetHandle": "left",
+      "type": "default",
+      "updatable": true,
+      "data": {
+        "narrative": "Age affects likelihood of receiving steroid treatment"
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      }
+    },
+    {
+      "id": "DiseaseSeverity->SteroidTreatment",
+      "source": "DiseaseSeverity",
+      "target": "SteroidTreatment",
+      "targetHandle": "left",
+      "type": "default",
+      "updatable": true,
+      "data": {
+        "narrative": "Disease severity influences treatment decisions"
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      }
+    },
+    {
+      "id": "SteroidTreatment->CRP",
+      "source": "SteroidTreatment",
+      "target": "CRP",
+      "targetHandle": "left",
+      "type": "causal",
+      "updatable": true,
+      "data": {
+        "narrative": "Steroid treatment modulates CRP levels"
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#00dfa7"
+      }
+    },
+    {
+      "id": "CRP->Survival28Day",
+      "source": "CRP",
+      "target": "Survival28Day",
+      "targetHandle": "left",
+      "type": "causal",
+      "updatable": true,
+      "data": {
+        "narrative": "CRP levels affect survival outcomes"
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#00dfa7"
+      }
+    },
+    {
+      "id": "Age->Survival28Day",
+      "source": "Age",
+      "target": "Survival28Day",
+      "targetHandle": "left",
+      "type": "default",
+      "updatable": true,
+      "data": {
+        "narrative": "Age directly impacts survival probability"
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      }
+    },
+    {
+      "id": "DiseaseSeverity->Survival28Day",
+      "source": "DiseaseSeverity",
+      "target": "Survival28Day",
+      "targetHandle": "left",
+      "type": "default",
+      "updatable": true,
+      "data": {
+        "narrative": "Disease severity directly affects mortality risk"
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      }
+    },
+    {
+      "id": "SteroidTreatment->Survival28Day",
+      "source": "SteroidTreatment",
+      "target": "Survival28Day",
+      "targetHandle": "left",
+      "type": "causal",
+      "updatable": true,
+      "data": {
+        "narrative": "Direct effect of steroid treatment on survival\n\n| Model Version | Base Covariates | Covariates | Overall Rank | Overall Risk Ratio | Severity 1 Risk Ratio (95% CI) | Severity 1 Outlier Boots | Severity 2 Risk Ratio (95% CI) | Severity 2 Outlier Boots | Severity 3 Risk Ratio (95% CI) | Severity 3 Outlier Boots |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| LLMDS1 | AGE | STEROIDS, SEVERITY_NUMERIC | -1 | 1.02 | 1.14 (0.97, 1.35) | 0 | 0.93 (0.87, 1.02) | 5 | 0.98 (0.90, 1.07) | 10 |"
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#00dfa7"
+      }
+    }
+  ]
+}

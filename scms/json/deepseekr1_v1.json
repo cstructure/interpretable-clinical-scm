@@ -1,0 +1,353 @@
+{
+  "nodes": [
+    {
+      "id": "SteroidTreatment",
+      "position": {
+        "x": 220,
+        "y": 120
+      },
+      "data": {
+        "label": "Steroid Treatment",
+        "narrative": "Administration of steroid treatment (binary: treated/not treated)",
+        "type": "action",
+        "featureSource": {
+          "sdy1662_data_dictionary.csv": {
+            "featureID": [
+              "STEROID_ADMIN"
+            ],
+            "featureCategory": "Binary"
+          }
+        }
+      },
+      "type": "action",
+      "xPos": 220,
+      "yPos": 120,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40
+    },
+    {
+      "id": "Survival28Day",
+      "position": {
+        "x": 580,
+        "y": 144.375
+      },
+      "data": {
+        "label": "28-Day Survival",
+        "narrative": "Patient survival status at 28 days post-hospitalization",
+        "type": "outcome",
+        "featureSource": {
+          "sdy1662_data_dictionary.csv": {
+            "featureID": [
+              "SURVIVAL_28D"
+            ],
+            "featureCategory": "Binary"
+          }
+        }
+      },
+      "type": "outcome",
+      "xPos": 580,
+      "yPos": 144.375,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40
+    },
+    {
+      "id": "Age",
+      "position": {
+        "x": 40,
+        "y": 15
+      },
+      "data": {
+        "label": "Age",
+        "narrative": "Patient age at hospitalization",
+        "type": "adjusted",
+        "featureSource": {
+          "sdy1662_data_dictionary.csv": {
+            "featureID": [
+              "AGE"
+            ],
+            "featureCategory": "Continuous"
+          }
+        }
+      },
+      "type": "adjusted",
+      "xPos": 40,
+      "yPos": 15,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40
+    },
+    {
+      "id": "DiseaseSeverity",
+      "position": {
+        "x": 40,
+        "y": 159.375
+      },
+      "data": {
+        "label": "Disease Severity",
+        "narrative": "Severity of illness at admission (e.g., APACHE score)",
+        "type": "adjusted",
+        "featureSource": {
+          "sdy1662_data_dictionary.csv": {
+            "featureID": [
+              "APACHE_SCORE"
+            ],
+            "featureCategory": "Ordinal"
+          }
+        }
+      },
+      "type": "adjusted",
+      "xPos": 40,
+      "yPos": 159.375,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40
+    },
+    {
+      "id": "Comorbidities",
+      "position": {
+        "x": 40,
+        "y": 234.375
+      },
+      "data": {
+        "label": "Comorbidities",
+        "narrative": "Number of pre-existing comorbidities",
+        "type": "adjusted",
+        "featureSource": {
+          "sdy1662_data_dictionary.csv": {
+            "featureID": [
+              "COMORBID_COUNT"
+            ],
+            "featureCategory": "Count"
+          }
+        }
+      },
+      "type": "adjusted",
+      "xPos": 40,
+      "yPos": 234.375,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40
+    },
+    {
+      "id": "CRP",
+      "position": {
+        "x": 400,
+        "y": 63.75
+      },
+      "data": {
+        "label": "CRP",
+        "narrative": "Level of C-reactive protein (CRP), an inflammatory marker",
+        "type": "adjusted",
+        "featureSource": {
+          "sdy1662_data_dictionary.csv": {
+            "featureID": [
+              "CRP"
+            ],
+            "featureCategory": "Continuous"
+          }
+        }
+      },
+      "type": "adjusted",
+      "xPos": 400,
+      "yPos": 63.75,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40
+    },
+    {
+      "id": "IL6",
+      "position": {
+        "x": 400,
+        "y": 131.25
+      },
+      "data": {
+        "label": "IL-6",
+        "narrative": "Level of interleukin-6 (IL-6), an inflammatory marker",
+        "type": "adjusted",
+        "featureSource": {
+          "sdy1662_data_dictionary.csv": {
+            "featureID": [
+              "IL6"
+            ],
+            "featureCategory": "Continuous"
+          }
+        }
+      },
+      "type": "adjusted",
+      "xPos": 400,
+      "yPos": 131.25,
+      "zIndex": 10,
+      "width": 40,
+      "height": 40
+    }
+  ],
+  "edges": [
+    {
+      "id": "Age->SteroidTreatment",
+      "source": "Age",
+      "target": "SteroidTreatment",
+      "targetHandle": "left",
+      "type": "default",
+      "updatable": true,
+      "data": {
+        "narrative": "Age affects likelihood of receiving steroid treatment"
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      }
+    },
+    {
+      "id": "DiseaseSeverity->SteroidTreatment",
+      "source": "DiseaseSeverity",
+      "target": "SteroidTreatment",
+      "targetHandle": "left",
+      "type": "default",
+      "updatable": true,
+      "data": {
+        "narrative": "Disease severity influences treatment decisions"
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      }
+    },
+    {
+      "id": "Comorbidities->SteroidTreatment",
+      "source": "Comorbidities",
+      "target": "SteroidTreatment",
+      "targetHandle": "left",
+      "type": "default",
+      "updatable": true,
+      "data": {
+        "narrative": "Comorbidities affect treatment eligibility"
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      }
+    },
+    {
+      "id": "SteroidTreatment->CRP",
+      "source": "SteroidTreatment",
+      "target": "CRP",
+      "targetHandle": "left",
+      "type": "causal",
+      "updatable": true,
+      "data": {
+        "narrative": "Steroid treatment modulates CRP levels"
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#00dfa7"
+      }
+    },
+    {
+      "id": "SteroidTreatment->IL6",
+      "source": "SteroidTreatment",
+      "target": "IL6",
+      "targetHandle": "left",
+      "type": "causal",
+      "updatable": true,
+      "data": {
+        "narrative": "Steroid treatment modulates IL-6 levels"
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#00dfa7"
+      }
+    },
+    {
+      "id": "CRP->Survival28Day",
+      "source": "CRP",
+      "target": "Survival28Day",
+      "targetHandle": "left",
+      "type": "causal",
+      "updatable": true,
+      "data": {
+        "narrative": "CRP levels affect survival outcomes"
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#00dfa7"
+      }
+    },
+    {
+      "id": "IL6->Survival28Day",
+      "source": "IL6",
+      "target": "Survival28Day",
+      "targetHandle": "left",
+      "type": "causal",
+      "updatable": true,
+      "data": {
+        "narrative": "IL-6 levels affect survival outcomes"
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#00dfa7"
+      }
+    },
+    {
+      "id": "Age->Survival28Day",
+      "source": "Age",
+      "target": "Survival28Day",
+      "targetHandle": "left",
+      "type": "default",
+      "updatable": true,
+      "data": {
+        "narrative": "Age directly impacts survival probability"
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      }
+    },
+    {
+      "id": "DiseaseSeverity->Survival28Day",
+      "source": "DiseaseSeverity",
+      "target": "Survival28Day",
+      "targetHandle": "left",
+      "type": "default",
+      "updatable": true,
+      "data": {
+        "narrative": "Disease severity directly affects mortality risk"
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      }
+    },
+    {
+      "id": "Comorbidities->Survival28Day",
+      "source": "Comorbidities",
+      "target": "Survival28Day",
+      "targetHandle": "left",
+      "type": "default",
+      "updatable": true,
+      "data": {
+        "narrative": "Comorbidities increase mortality risk"
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#ccc"
+      }
+    },
+    {
+      "id": "SteroidTreatment->Survival28Day",
+      "source": "SteroidTreatment",
+      "target": "Survival28Day",
+      "targetHandle": "left",
+      "type": "causal",
+      "updatable": true,
+      "data": {
+        "narrative": "Direct effect of steroid treatment on survival"
+      },
+      "markerEnd": {
+        "type": "arrowclosed",
+        "color": "#00dfa7"
+      }
+    }
+  ]
+}
