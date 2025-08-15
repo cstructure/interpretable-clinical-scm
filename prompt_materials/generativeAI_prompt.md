@@ -2,6 +2,7 @@
 We will build a structural causal model in graphml format (provided below).
 Review the Midwest Healthcare Conference Causal Diagram Challenge for context and create a structural causal model for evaluating steroids safety and efficacy on 28 day survival in hospitalized patients.  
 Review the sdy1662\_data\_dictionary and add features consistent with the expected graphml format:
+```
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- 
   CAUSAL MODEL GRAPHML SPECIFICATION
@@ -81,7 +82,7 @@ Review the sdy1662\_data\_dictionary and add features consistent with the expect
             "featureCategory": "<featureType>"
           }
         }
-\end{verbatim}
+```
 
 @cStructureUserDocs&features @sdy1662\_data\_dictionary.csv @MidWestHealthcareConfCausalDiagramChallenge @PSBsession @scmCompetition 
 
