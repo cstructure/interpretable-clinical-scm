@@ -1,0 +1,4 @@
+ severity  n_boot  outside_CI  correct_direction  median_rr  ci_lower  ci_upper
+        1     500         496                  1       0.17      0.04     0.520
+        2     500         491                317       0.40      0.04     6.745
+        3     500         449                300       0.72      0.03     3.001
