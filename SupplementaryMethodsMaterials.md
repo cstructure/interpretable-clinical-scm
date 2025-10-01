@@ -1,4 +1,4 @@
-# Supplementary Methods & Materials
+# Supplementary Methods & Materials for "Leveraging Generative AI for Interpretable Clinical Decision Making Through Causal Graphs"
 
 ## Methods
 

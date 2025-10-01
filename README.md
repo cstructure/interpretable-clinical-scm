@@ -1,4 +1,4 @@
-# Interpretable Clinical SCM: Generative AI vs Human Performance
+# Leveraging Generative AI for Interpretable Clinical Decision Making Through Causal Graphs
 
 ![Graphical Abstract](graphical_abstract.png)
 
