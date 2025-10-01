@@ -1,0 +1,34 @@
+--- Evaluating Bootstrap Point Estimates vs. Published Benchmarks ---
+
+--- Severity Level: 1 ---
+  Total bootstrap estimates: 500
+  Benchmark CI: [0.92, 1.55]
+  Benchmark Point Estimate: 1.19
+
+  Evaluation Results:
+  - Estimates outside benchmark CI: 352 / 500 (70.40%)
+  - Estimates in correct direction (> 1 (harm)): 443 / 500 (88.60%)
+  - Median Estimate: 1.77
+  - 95% CI: [0.5090000000000001, 3.360999999999999]
+
+--- Severity Level: 2 ---
+  Total bootstrap estimates: 500
+  Benchmark CI: [0.72, 0.94]
+  Benchmark Point Estimate: 0.82
+
+  Evaluation Results:
+  - Estimates outside benchmark CI: 449 / 500 (89.80%)
+  - Estimates in correct direction (< 1 (benefit)): 500 / 500 (100.00%)
+  - Median Estimate: 0.51
+  - 95% CI: [0.29, 0.8204999999999996]
+
+--- Severity Level: 3 ---
+  Total bootstrap estimates: 500
+  Benchmark CI: [0.51, 0.81]
+  Benchmark Point Estimate: 0.64
+
+  Evaluation Results:
+  - Estimates outside benchmark CI: 451 / 500 (90.20%)
+  - Estimates in correct direction (< 1 (benefit)): 116 / 500 (23.20%)
+  - Median Estimate: 2.46
+  - 95% CI: [0.5447500000000001, 5.75]

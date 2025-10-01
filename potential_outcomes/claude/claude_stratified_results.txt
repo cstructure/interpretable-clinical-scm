@@ -1,0 +1,21 @@
+--- Severity Level 1 ---
+Number of point estimates outside published CI: 402 (80.40%)
+Number of point estimates in correct direction: 496 (99.20%)
+Median of point estimates: 1.8900
+95% CI: 1.1395 - 2.8062
+
+
+--- Severity Level 2 ---
+Number of point estimates outside published CI: 317 (63.40%)
+Number of point estimates in correct direction: 319 (63.80%)
+Median of point estimates: 0.9400
+95% CI: 0.3248 - 1.3152
+
+
+--- Severity Level 3 ---
+Number of point estimates outside published CI: 497 (99.40%)
+Number of point estimates in correct direction: 37 (7.40%)
+Median of point estimates: 1.1400
+95% CI: 0.9347 - 2.3205
+
+
