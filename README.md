@@ -1,4 +1,4 @@
-# Interpretable Clinical SCM: Generative AI vs Human Performance
+# Leveraging Generative AI for Interpretable Clinical Decision Making Through Causal Graphs
 
 ![Graphical Abstract](graphical_abstract.png)
 
@@ -14,9 +14,40 @@ We evaluated how both human domain experts and state-of-the-art AI systems const
 
 ## Repository Contents
 
-- **`prompt_materials/`**: Contains materials related to the generative AI prompts used in this project. This includes data dictionaries, user documentation, and the specific prompts given to the AI.
-- **`results/`**: This directory includes the outputs of the analyses, such as forest plots and error analysis documents.
-- **`scms/`**: Contains the structural causal models (SCMs) that are central to this repository. The SCMs are organized into subdirectories based on their file format (`graphml`, `json`, `png`).
-- **`graphical_abstract.png`**: A visual summary of the project.
+### Analysis Code
+
+- **`potential_outcomes/`**: Causal effect estimation scripts organized by AI model:
+  - `claude/`: Claude model analysis scripts and results processing
+  - `deepseekr1/`: DeepSeek-R1 model analysis with utility functions
+  - `gemini/`: Gemini model analysis and evaluation scripts
+  - `openai/`: OpenAI model analysis with bootstrap metrics computation
+
+### Prompt Materials
+
+- **`prompt_materials/`**: Materials used to prompt generative AI models:
+  - `causal_plausibility/`: Task descriptions for assessing causal relationship plausibility
+  - `potential_outcomes/`: Prompts for causal effect estimation tasks
+  - `scm/`: Structural causal model construction prompts
+  - `sdy1662_data_dictionary.csv`: Data dictionary for the COVID-19 dataset
+  - `PSBsession.md`: Pacific Symposium on Biocomputing session documentation
+
+### Structural Causal Models
+
+- **`scms/`**: AI-generated and human-created structural causal models:
+  - `graphml/`: Graph models in GraphML format
+  - `json/`: SCM specifications in JSON format
+  - `png/`: Visual representations of causal graphs
+
+### Results
+
+- **`results/`**: Analysis outputs and visualizations:
+  - `severity1_forestplot.png`, `severity2_forestplot.png`, `severity3_forestplot.png`: Forest plots showing treatment effect estimates across severity strata
+  - `sign_errors.pdf`: Error analysis document
+  - `causal_edges_plausibility_scores.csv`: Plausibility ratings for proposed causal relationships
+
+### Other Files
+
+- **`graphical_abstract.png`**: Visual summary of the project
+- **`LICENSE`**: MIT License
 
 
