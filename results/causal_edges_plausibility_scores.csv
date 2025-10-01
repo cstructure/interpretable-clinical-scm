@@ -1,0 +1,123 @@
+Model,SourceNodeLabel,TargetNodeLabel,CausalPlausibility_Reviewer1,CausalPlausibility_Reviewer2,CausalPlausibility_Reviewer3
+team1,Steroids,Covid Survival rate,3,3,3
+team1,Glucose,Steroids,3,0,1
+team1,Severity,Steroids,3,3,3
+team1,SBP,Steroids,3,2,0
+team1,Smoking,Severity,3,3,2
+team1,Severity,Covid Survival rate,3,3,3
+team1,SBP,Covid Survival rate,0,3,2
+team1,Age,Steroids,2,2,1
+team1,Age,Severity,2,3,1
+team1,Age,SBP,3,2,3
+team1,BMI,Severity,2,3,2
+team1,BMI,Covid Survival rate,3,1,2
+team1,CKD,SBP,3,3,3
+team1,Alcohol,SBP,3,3,3
+team1,Diabetes,SBP,3,1,2
+team1,Coronary Disease,SBP,3,2,3
+team1,Asthma,SBP,3,1,2
+team1,COPD,SBP,3,1,2
+team1,Diabetes,Glucose,3,3,3
+team1,Sleep Apnea,SBP,3,3,3
+team2,Steroid Administration,28 Day Survival,3,3,3
+team2,SATO2,Steroid Administration,1,3,3
+team2,CKD,28 Day Survival,3,3,3
+team2,Diabetes,28 Day Survival,3,3,2
+team2,Remdesivir Antiviral Administration,28 Day Survival,1,3,3
+team2,Resp Rate,28 Day Survival,3,3,2
+team2,Blood Pressure,Steroid Administration,1,3,2
+team2,Age,Steroid Administration,2,2,2
+team2,BMI,28 Day Survival,1,3,2
+team2,Smoking,SATO2,2,3,3
+team2,Smoking,28 Day Survival,2,2,2
+team3,Age,Survival,3,3,3
+team3,Steroid Treatment,Survival,3,2,3
+team3,O2_SAT,Survival,3,3,3
+team3,Gender,Survival,0,2,2
+team3,BMI,Survival,1,1,2
+openaio3_v2,Age,Severity,3,3,3
+openaio3_v2,Age,Steroids,0,1,2
+openaio3_v2,Age,28-day Survival,3,3,3
+openaio3_v2,Sex,Severity,0,2,2
+openaio3_v2,Sex,Steroids,0,1,1
+openaio3_v2,Sex,28-day Survival,0,2,2
+openaio3_v2,Severity,Steroids,3,3,3
+openaio3_v2,Severity,28-day Survival,3,3,3
+openaio3_v2,Steroids,28-day Survival,3,3,3
+openaio3_v2,Diabetes,Severity,3,3,1
+openaio3_v2,Diabetes,Steroids,3,2,1
+openaio3_v2,Diabetes,28-day Survival,3,3,1
+openaio3_v2,CKD,Severity,3,3,3
+openaio3_v2,CKD,Steroids,2,3,1
+openaio3_v2,CKD,28-day Survival,2,3,3
+openaio3_v2,CHF,Severity,2,3,2
+openaio3_v2,CHF,Steroids,3,2,3
+openaio3_v2,CHF,28-day Survival,3,3,3
+openaio3_v2,COPD,Severity,3,3,2
+openaio3_v2,COPD,Steroids,3,1,2
+openaio3_v2,COPD,28-day Survival,3,3,2
+openaio3_v2,CAD,Severity,1,3,3
+openaio3_v2,CAD,Steroids,3,2,2
+openaio3_v2,CAD,28-day Survival,2,3,3
+openaio3_v2,Cancer,Severity,2,3,1
+openaio3_v2,Cancer,Steroids,3,2,1
+openaio3_v2,Cancer,28-day Survival,2,3,2
+openaio3_v2,Anticoagulants,Steroids,3,3,1
+openaio3_v2,Anticoagulants,28-day Survival,0,2,3
+openaio3_v2,Anticytokines,Steroids,3,2,3
+openaio3_v2,Anticytokines,28-day Survival,2,3,3
+openaio3_v2,HCQ,Steroids,0,1,1
+openaio3_v2,HCQ,28-day Survival,3,1,3
+openaio3_v2,Remdesivir,Steroids,0,1,2
+openaio3_v2,Remdesivir,28-day Survival,2,3,3
+deepseekr1_v2,Age,Steroid Treatment,2,2,2
+deepseekr1_v2,Disease Severity,Steroid Treatment,3,3,3
+deepseekr1_v2,Steroid Treatment,CRP,0,3,3
+deepseekr1_v2,CRP,Death,3,3,2
+deepseekr1_v2,Age,Death,1,3,3
+deepseekr1_v2,Disease Severity,Death,3,3,3
+deepseekr1_v2,Steroid Treatment,Death,2,3,3
+claudeopus_v2,Age,Oxygen Saturation,0,1,3
+claudeopus_v2,Age,Steroids,0,2,3
+claudeopus_v2,Age,Mortality,3,3,3
+claudeopus_v2,Sex,Inflammatory Markers,0,2,1
+claudeopus_v2,Race/Ethnicity,Steroids,0,0,1
+claudeopus_v2,BMI,Oxygen Saturation,3,3,2
+claudeopus_v2,Diabetes,Inflammatory Markers,1,2,2
+claudeopus_v2,Diabetes,Mortality,3,3,2
+claudeopus_v2,Heart Failure,Mortality,3,3,3
+claudeopus_v2,Chronic Lung Disease,Oxygen Saturation,3,3,3
+claudeopus_v2,Chronic Kidney Disease,Mortality,3,3,2
+claudeopus_v2,Oxygen Saturation,Steroids,0,3,3
+claudeopus_v2,Oxygen Saturation,Mortality,3,3,3
+claudeopus_v2,Respiratory Rate,Steroids,3,3,2
+claudeopus_v2,Inflammatory Markers,Steroids,3,3,2
+claudeopus_v2,Inflammatory Markers,Mortality,2,3,3
+claudeopus_v2,Steroids,Mortality,3,3,3
+claudeopus_v2,Hydroxychloroquine,Mortality,3,1,3
+claudeopus_v2,Remdesivir,Mortality,1,3,3
+claudeopus_v2,Steroids,ARDS,3,0,3
+claudeopus_v2,ARDS,Mortality,3,3,3
+claudeopus_v2,Anticoagulants,Mortality,1,1,3
+geminipro25_v2,Age,Severity Score,2,3,3
+geminipro25_v2,BMI,Severity Score,2,2,2
+geminipro25_v2,Severity Score,Steroids,3,3,3
+geminipro25_v2,Steroids,28-Day Mortality,3,3,3
+geminipro25_v2,Severity Score,28-Day Mortality,3,3,3
+geminipro25_v2,Age,28-Day Mortality,3,3,3
+geminipro25_v2,Diabetes,Severity Score,2,3,1
+geminipro25_v2,Congestive Heart Failure,Severity Score,2,3,3
+geminipro25_v2,Chronic Kidney Disease,Severity Score,2,3,2
+geminipro25_v2,COPD,Severity Score,3,3,2
+geminipro25_v2,Cancer,Severity Score,2,3,2
+geminipro25_v2,CRP (log2),Steroids,1,3,2
+geminipro25_v2,Min O2 Saturation,Steroids,3,3,3
+geminipro25_v2,Diabetes,28-Day Mortality,3,3,1
+geminipro25_v2,Congestive Heart Failure,28-Day Mortality,3,3,3
+geminipro25_v2,Chronic Kidney Disease,28-Day Mortality,3,3,2
+geminipro25_v2,COPD,28-Day Mortality,3,3,2
+geminipro25_v2,Cancer,28-Day Mortality,3,3,2
+geminipro25_v2,Severity Score,Remdesivir,1,3,3
+geminipro25_v2,Remdesivir,28-Day Mortality,1,3,3
+geminipro25_v2,Severity Score,CRP (log2),2,3,2
+geminipro25_v2,Severity Score,Min O2 Saturation,3,3,3
